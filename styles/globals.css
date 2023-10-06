@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  i {
+    @apply leading-[0px];
+  }
+
+  h3 {
+    @apply pb-2 text-xs uppercase tracking-widest opacity-70;
+  }
+}
+
+@layer components {
+  .theme-button {
+    @apply flex items-center justify-center rounded p-2;
+  }
+}
