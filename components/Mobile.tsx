@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Mobile = () => {
   return (
     <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center">

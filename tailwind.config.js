@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      sans: ["Aeonik TRIAL"],
       sans: ["Inter"],
     },
   },

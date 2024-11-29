@@ -10,7 +10,7 @@ const Mapfeed = () => {
   const hover = buttonHover[theme];
 
   return (
-    <div className="w-[400px]">
+    <div className="">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <Image src="/mapfeed.png" alt="mapfeed-logo" height={32} width={32} />
@@ -26,7 +26,7 @@ const Mapfeed = () => {
         </Link>
       </div>
       <div>Interactive Map</div>
-      <div className="opacity-70">2023 - Present</div>
+      <div className="opacity-70">2023</div>
       {/* <div className="py-2">
         <Image
           src="/mapfeed-demo.png"
@@ -42,7 +42,6 @@ const Mapfeed = () => {
         </div>
         <div className="flex space-x-2">
           <Image src="/react.png" alt="react-logo" width={32} height={32} />
-          <Image src="/redux.svg" alt="redux-logo" width={32} height={32} />
           <Image src="/next.svg" alt="next-logo" width={32} height={32} />
           <Image
             src="/typescript.png"
@@ -57,12 +56,6 @@ const Mapfeed = () => {
             height={32}
           />
           <Image src="/vercel.svg" alt="vercel-logo" width={32} height={32} />
-          <Image
-            src="/firebase.svg"
-            alt="firebase-logo"
-            width={32}
-            height={32}
-          />
         </div>
       </div>
       <div className="relative mt-8 flex items-center">

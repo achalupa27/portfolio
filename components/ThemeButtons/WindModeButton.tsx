@@ -16,7 +16,7 @@ const WindModeButton = () => {
     </button>
   ) : (
     <button
-      className={`theme-button`}
+      className={`theme-button hover:${bgInvertedColor} hover:${textInvertedColor}`}
       onClick={() => dispatch(setTheme("wind"))}
     >
       <i className="fi fi-rr-wind" />

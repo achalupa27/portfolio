@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useTypewriter } from "react-simple-typewriter";
-import { useAppSelector } from "../redux/hooks";
-import { selectTheme } from "../redux/slices/themeSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import {
+  selectActiveSection,
+  selectTheme,
+  setActiveSection,
+} from "../redux/slices/themeSlice";
 import {
   bgInvertedColors,
   borderColors,
@@ -21,6 +25,33 @@ const Contact = () => {
   const bg = bgInvertedColors[theme];
   const text = textInvertedColors[theme];
   const placeholderText = placeholder[theme];
+  const activeSection = useAppSelector(selectActiveSection);
+
+  const dispatch = useAppDispatch();
+  const sectionRef = useRef(null);
+  const bgInvertedColor = bgInvertedColors[theme];
+  const textInvertedColor = textInvertedColors[theme];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          dispatch(setActiveSection("contact"));
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [dispatch]);
 
   const { register, handleSubmit } = useForm<Inputs>();
   const [isSending, setIsSending] = useState(false);
@@ -58,8 +89,17 @@ const Contact = () => {
   // });
 
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly">
-      <div className="space-x-2 pb-2">
+    <div
+      ref={sectionRef}
+      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly"
+    >
+      <div
+        className={`mb-2 space-x-2  rounded px-2 ${
+          activeSection === "contact"
+            ? `${bgInvertedColor} ${textInvertedColor}`
+            : ""
+        }`}
+      >
         <i className="fi fi-rr-envelope text-xs" />
         <span className="text-sm uppercase tracking-widest">Contact</span>
       </div>

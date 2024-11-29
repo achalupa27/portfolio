@@ -6,7 +6,6 @@ const IceModeButton = () => {
   const theme = useAppSelector(selectTheme);
   const dispatch = useAppDispatch();
 
-  const textColor = textColors[theme];
   const bgInvertedColor = bgInvertedColors[theme];
   const textInvertedColor = textInvertedColors[theme];
 
@@ -16,7 +15,7 @@ const IceModeButton = () => {
     </button>
   ) : (
     <button
-      className={`theme-button`}
+      className={`theme-button hover:${bgInvertedColor} hover:${textInvertedColor}`}
       onClick={() => dispatch(setTheme("ice"))}
     >
       <i className="fi fi-rr-snowflake" />

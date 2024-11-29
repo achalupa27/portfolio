@@ -11,39 +11,35 @@ import RainModeButton from "./ThemeButtons/RainModeButton";
 import WindModeButton from "./ThemeButtons/WindModeButton";
 import SpaceModeButton from "./ThemeButtons/SpaceModeButton";
 import { useAppSelector } from "../redux/hooks";
-import { selectTheme } from "../redux/slices/themeSlice";
-import { bgColors } from "../themes";
+import { selectActiveSection, selectTheme } from "../redux/slices/themeSlice";
+import { bgColors, bgInvertedColors, textInvertedColors } from "../themes";
 
 const Header = () => {
   const theme = useAppSelector(selectTheme);
+  const activeSection = useAppSelector(selectActiveSection);
   const bgColor = bgColors[theme];
-
-  const getThemeDescription = () => {
-    if (theme === "light") return "Light";
-    else if (theme === "dark") return "Dark";
-    else if (theme === "ice") return "Ice";
-    else if (theme === "earth") return "Earth";
-    else if (theme === "water") return "Water";
-    else if (theme === "fire") return "Fire";
-    else if (theme === "rain") return "Rain";
-    else if (theme === "wind") return "Wind";
-    else if (theme === "space") return "Space";
-  };
+  const bgInvertedColor = bgInvertedColors[theme];
+  const textInvertedColor = textInvertedColors[theme];
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex max-w-7xl items-center justify-between py-4 ${bgColor}`}
+      className={`sticky top-0 z-50 mx-auto flex max-w-7xl items-center justify-between px-0 py-4 md:px-0 ${bgColor}`}
     >
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ delay: 0, duration: 1 }}
-        className="flex basis-1/3 cursor-pointer items-center space-x-2"
+        className="flex w-fit basis-1/3 items-center"
       >
-        <Link href="https://www.github.com/achalupa27" target="_blank">
+        <Link
+          className={`hover:${bgInvertedColor} flex h-8 w-8 items-center justify-center rounded hover:${textInvertedColor}`}
+          href="https://www.github.com/achalupa27"
+          target="_blank"
+        >
           <AiFillGithub className="h-6 w-6" />
         </Link>
         <Link
+          className={`hover:${bgInvertedColor} flex h-8 w-8 items-center justify-center rounded hover:${textInvertedColor}`}
           href="https://www.linkedin.com/in/andrew-chalupa-b03b57262/"
           target="_blank"
         >
@@ -52,7 +48,7 @@ const Header = () => {
         <Link
           href="https://www.linkedin.com/in/andrew-chalupa-b03b57262/"
           target="_blank"
-          className="flex items-center justify-center"
+          className={`hover:${bgInvertedColor} flex h-8 w-8 items-center justify-center rounded hover:${textInvertedColor}`}
         >
           <i className="fi fi-sr-file-pdf text-[19px] leading-[0px]"></i>
         </Link>
@@ -66,13 +62,15 @@ const Header = () => {
         <div className="flex items-center">
           <LightModeButton />
           <DarkModeButton />
-          <IceModeButton />
-          <EarthModeButton />
-          <WaterModeButton />
-          <FireModeButton />
-          <WindModeButton />
-          <RainModeButton />
-          <SpaceModeButton />
+          <div className="hidden items-center md:flex">
+            <IceModeButton />
+            <EarthModeButton />
+            <WaterModeButton />
+            <FireModeButton />
+            <WindModeButton />
+            <RainModeButton />
+            <SpaceModeButton />
+          </div>
         </div>
         {/* <div className="absolute top-10 text-xs">{getThemeDescription()}</div> */}
       </motion.div>
@@ -80,24 +78,56 @@ const Header = () => {
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ delay: 0, duration: 1 }}
-        className="mr-6 flex basis-1/3 cursor-pointer items-center justify-end"
+        className="flex basis-1/3 cursor-pointer items-center justify-end"
       >
-        <Link href="#profile" className="theme-button">
+        <Link
+          href="#profile"
+          className={`theme-button ${
+            activeSection === "profile"
+              ? `${bgInvertedColor} ${textInvertedColor}`
+              : `hover:${bgInvertedColor} hover:${textInvertedColor}`
+          }`}
+        >
           <i className="fi fi-rr-user" />
         </Link>
-        <Link href="#work" className="theme-button">
+        <Link
+          href="#work"
+          className={`theme-button ${
+            activeSection === "work"
+              ? `${bgInvertedColor} ${textInvertedColor}`
+              : `hover:${bgInvertedColor} hover:${textInvertedColor}`
+          }`}
+        >
           <i className="fi fi-rr-briefcase" />
         </Link>
-        <Link href="#websites" className="theme-button">
+        <Link
+          href="#websites"
+          className={`theme-button ${
+            activeSection === "websites"
+              ? `${bgInvertedColor} ${textInvertedColor}`
+              : `hover:${bgInvertedColor} hover:${textInvertedColor}`
+          }`}
+        >
           <i className="fi fi-rr-window-alt" />
         </Link>
-        {/* <Link href="#mobile" className="theme-button">
-          <i className="fi fi-rr-mobile-notch" />
-        </Link> */}
-        <Link href="#skills" className="theme-button">
+        <Link
+          href="#skills"
+          className={`theme-button ${
+            activeSection === "skills"
+              ? `${bgInvertedColor} ${textInvertedColor}`
+              : `hover:${bgInvertedColor} hover:${textInvertedColor}`
+          }`}
+        >
           <i className="fi fi-rr-hammer-crash" />
         </Link>
-        <Link href="#contact" className="theme-button">
+        <Link
+          href="#contact"
+          className={`theme-button ${
+            activeSection === "contact"
+              ? `${bgInvertedColor} ${textInvertedColor}`
+              : `hover:${bgInvertedColor} hover:${textInvertedColor}`
+          }`}
+        >
           <i className="fi fi-rr-envelope" />
         </Link>
       </motion.div>

@@ -10,7 +10,7 @@ const Lunaria = () => {
   const hover = buttonHover[theme];
 
   return (
-    <div className="w-[400px]">
+    <div className="">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Image src="lunaria.svg" alt="lunaria-logo" height={32} width={32} />

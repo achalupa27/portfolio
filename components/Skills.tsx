@@ -1,14 +1,59 @@
 import Image from "next/image";
+import { useRef, useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "../redux/hooks";
+import {
+  selectActiveSection,
+  selectTheme,
+  setActiveSection,
+} from "../redux/slices/themeSlice";
+import { bgColors, bgInvertedColors, textInvertedColors } from "../themes";
 
 const Skills = () => {
+  const theme = useAppSelector(selectTheme);
+  const dispatch = useAppDispatch();
+  const sectionRef = useRef(null);
+  const bgInvertedColor = bgInvertedColors[theme];
+  const textInvertedColor = textInvertedColors[theme];
+  const activeSection = useAppSelector(selectActiveSection);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          dispatch(setActiveSection("skills"));
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [dispatch]);
+
   return (
-    <div className="mx-auto mt-24 flex max-w-7xl flex-col items-center justify-center">
-      <div className="space-x-2 pb-6">
+    <div
+      ref={sectionRef}
+      className="mx-auto mt-24 flex max-w-7xl flex-col items-center justify-center"
+    >
+      <div
+        className={`mb-6 space-x-2  rounded px-2 ${
+          activeSection === "skills"
+            ? `${bgInvertedColor} ${textInvertedColor}`
+            : ""
+        }`}
+      >
         <i className="fi fi-rr-hammer-crash text-xs" />
         <span className="text-sm uppercase tracking-widest">Skills</span>
       </div>
       <div className="space-y-4">
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Languages</h3>
           <div className="flex space-x-2">
             <Image
@@ -28,7 +73,7 @@ const Skills = () => {
             <Image src="/java.png" alt="java-logo" width={32} height={32} />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Frontend</h3>
           <div className="flex space-x-2">
             <Image src="/react.png" alt="react-logo" width={32} height={32} />
@@ -46,7 +91,7 @@ const Skills = () => {
             <Image src="/jquery.png" alt="jquery-logo" width={32} height={32} />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Backend</h3>
           <div className="flex space-x-2">
             <Image
@@ -77,7 +122,7 @@ const Skills = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Databases</h3>
           <div className="flex space-x-2">
             <Image src="/mysql.png" alt="mysql-logo" width={32} height={32} />
@@ -95,7 +140,7 @@ const Skills = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>API</h3>
           <div className="flex space-x-2">
             <Image src="/rest.svg" alt="rest-logo" width={32} height={32} />
@@ -107,7 +152,7 @@ const Skills = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Version Control</h3>
           <div className="flex space-x-2">
             <Image src="/git.png" alt="git-logo" width={32} height={32} />
@@ -116,13 +161,13 @@ const Skills = () => {
             <Image src="/npm.png" alt="npm-logo" width={32} height={32} />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Testing</h3>
           <div className="flex space-x-2">
             <Image src="/vitest.svg" alt="vitest-logo" width={32} height={32} />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3>Design</h3>
           <div className="flex space-x-2">
             <Image

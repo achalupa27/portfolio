@@ -1,26 +1,29 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../store";
+// In themeSlice.js
+import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
-interface ThemeState {
-  theme: string;
-}
-
-const initialState: ThemeState = {
+const initialState = {
   theme: "light",
+  activeSection: null,
 };
 
-const themeSlice = createSlice({
-  name: "them",
+export const themeSlice = createSlice({
+  name: "theme",
   initialState,
   reducers: {
-    setTheme: (state, action: PayloadAction<string>) => {
+    setTheme: (state, action) => {
       state.theme = action.payload;
+    },
+    setActiveSection: (state, action) => {
+      state.activeSection = action.payload;
     },
   },
 });
 
-export const { setTheme } = themeSlice.actions;
+export const { setTheme, setActiveSection } = themeSlice.actions;
 
 export const selectTheme = (state: RootState) => state.theme.theme;
+export const selectActiveSection = (state: RootState) =>
+  state.theme.activeSection;
 
 export default themeSlice.reducer;

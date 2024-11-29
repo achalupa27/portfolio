@@ -10,7 +10,7 @@ const Cleantrades = () => {
   const hover = buttonHover[theme];
 
   return (
-    <div className="w-[400px]">
+    <div className="">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <Image

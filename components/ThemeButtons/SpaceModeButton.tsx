@@ -16,7 +16,7 @@ const EarthModeButton = () => {
     </button>
   ) : (
     <button
-      className={`theme-button`}
+      className={`theme-button hover:${bgInvertedColor} hover:${textInvertedColor}`}
       onClick={() => dispatch(setTheme("space"))}
     >
       <i className="fi fi-rr-planet-ringed" />

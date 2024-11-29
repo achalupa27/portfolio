@@ -16,7 +16,7 @@ const DarkModeButton = () => {
     </button>
   ) : (
     <button
-      className={`theme-button`}
+      className={`theme-button hover:${bgInvertedColor} hover:${textInvertedColor}`}
       onClick={() => dispatch(setTheme("dark"))}
     >
       <i className="fi fi-rr-moon" />

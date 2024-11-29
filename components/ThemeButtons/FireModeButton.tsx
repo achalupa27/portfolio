@@ -16,7 +16,7 @@ const FireModeButton = () => {
     </button>
   ) : (
     <button
-      className={`theme-button`}
+      className={`theme-button hover:${bgInvertedColor} hover:${textInvertedColor}`}
       onClick={() => dispatch(setTheme("fire"))}
     >
       <i className="fi fi-rr-flame" />
