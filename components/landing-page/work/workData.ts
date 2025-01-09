@@ -1,0 +1,22 @@
+export const workExperience: WorkExperience = {
+    company: 'VG Meats',
+    role: 'Lead Developer',
+    period: '2022 - Present',
+    responsibilities: ['Developed an ERP system', 'Built data pipelines', 'Automated repetitive workflows'],
+    technologies: [
+        { logo: '/react.png', name: 'react-logo' },
+        { logo: '/django.png', name: 'django-logo' },
+        { logo: '/google-cloud.svg', name: 'react-logo' },
+        { logo: '/python.png', name: 'python-logo' },
+        { logo: '/vercel.svg', name: 'vercel-logo' },
+        { logo: '/html.png', name: 'html-logo' },
+        { logo: '/css.png', name: 'css-logo' },
+        { logo: '/javascript.png', name: 'javascript-logo' },
+        { logo: '/mysql.svg', name: 'mysql-logo' },
+        { logo: '/tailwind.png', name: 'tailwind-logo' },
+        { logo: '/docker.png', name: 'docker-logo' },
+    ],
+    hasReferences: true,
+    border: 'border-gray-200',
+    bgSecondary: 'bg-white',
+};

@@ -1,49 +1,37 @@
-import Head from "next/head";
-import Contact from "../components/Contact";
-import Header from "../components/Header";
-import { useAppSelector } from "../redux/hooks";
-import { selectTheme } from "../redux/slices/themeSlice";
-import { bgColors, textColors } from "../themes";
-import Hero from "../components/Hero";
-import Work from "../components/Work";
-import Websites from "../components/Websites";
-import Mobile from "../components/Mobile";
-import Skills from "../components/Skills";
-import Footer from "../components/Footer";
+import Head from 'next/head';
+import Header from '../components/header';
+import { useAppSelector } from '../redux/hooks';
+import { selectTheme } from '../redux/slices/themeSlice';
+import Skills from '../components/landing-page/skills';
+import Footer from '../components/footer/Footer';
+import Hero from '../components/landing-page/hero';
+import Websites from '../components/landing-page/websites';
+import Particles from '@/components/ui/particles';
+import { Meteors } from '@/components/ui/meteors';
+import { themes } from '../themes';
+import Work from '../components/landing-page/work';
 
 const Home = () => {
-  const theme = useAppSelector(selectTheme);
+    const selectedTheme = useAppSelector(selectTheme);
+    const style = themes[selectedTheme];
+    const textColor = style.text;
+    const bgColor = style.bg;
 
-  const textColor = textColors[theme];
-  const bgColor = bgColors[theme];
-
-  return (
-    <div>
-      <Head>
-        <title>Portfolio</title>
-      </Head>
-
-      <div className={`${textColor} ${bgColor}`}>
-        <Header />
-        <div id="profile">
-          <Hero />
+    return (
+        <div className={`${textColor} ${bgColor}`}>
+            {selectedTheme === 'fire' && <Particles className='absolute inset-0 z-0 h-full' quantity={100} ease={80} color={'#000000'} refresh />}
+            {selectedTheme === 'space' && <Meteors number={30} />}
+            <Head>
+                <title>Andrew Chalupa</title>
+            </Head>
+            <Header />
+            <Hero />
+            <Skills />
+            <Work />
+            <Websites />
+            <Footer />
         </div>
-        <div id="work">
-          <Work />
-        </div>
-        <div id="websites">
-          <Websites />
-        </div>
-        <div id="skills">
-          <Skills />
-        </div>
-        <div id="contact" className="snap-center">
-          <Contact />
-        </div>
-        <Footer />
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Home;
