@@ -1,12 +1,12 @@
 export const typescriptSkill: Skill = {
     name: 'TypeScript',
-    logo: '/typescript.png',
+    logo: '/typescript.svg',
     category: 'Frontend',
 };
 
 export const pythonSkill: Skill = {
     name: 'Python',
-    logo: '/python.png',
+    logo: '/python.svg',
     category: 'Server & Scripting',
 };
 
@@ -18,7 +18,7 @@ export const nextJsSkill: Skill = {
 
 export const reactSkill: Skill = {
     name: 'React',
-    logo: '/react.png',
+    logo: '/react.svg',
     category: 'Javascript Library',
 };
 
@@ -36,13 +36,13 @@ export const firestoreSkill: Skill = {
 
 export const gitSkill: Skill = {
     name: 'Git',
-    logo: '/git.png',
+    logo: '/git.svg',
     category: 'Version Control',
 };
 
 export const tailwindSkill: Skill = {
     name: 'Tailwind',
-    logo: '/tailwind.png',
+    logo: '/tailwind.svg',
     category: 'Styling',
 };
 
@@ -66,7 +66,7 @@ export const mysqlSkill: Skill = {
 
 export const postgresSkill: Skill = {
     name: 'PostgreSQL',
-    logo: '/postgresql.png',
+    logo: '/postgresql.svg',
     category: 'Database',
 };
 
@@ -84,13 +84,13 @@ export const restSkill: Skill = {
 
 export const photoshopSkill: Skill = {
     name: 'Photoshop',
-    logo: '/photoshop.png',
+    logo: '/photoshop.svg',
     category: 'Design Tool',
 };
 
 export const figmaSkill: Skill = {
     name: 'Figma',
-    logo: '/figma.png',
+    logo: '/figma.svg',
     category: 'Design Tool',
 };
 
@@ -102,13 +102,13 @@ export const githubSkill: Skill = {
 
 export const vscodeSkill: Skill = {
     name: 'VS Code',
-    logo: '/vscode.png',
+    logo: '/vscode.svg',
     category: 'IDE',
 };
 
 export const npmSkill: Skill = {
     name: 'NPM',
-    logo: '/npm.png',
+    logo: '/npm.svg',
     category: 'Package Management',
 };
 
