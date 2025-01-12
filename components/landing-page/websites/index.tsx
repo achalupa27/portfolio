@@ -36,16 +36,12 @@ const Websites = () => {
     }, [dispatch]);
 
     return (
-        <section id='websites' ref={sectionRef} className='relative mx-auto flex max-w-7xl flex-col items-center'>
-            <div className={`mb-6 space-x-2 rounded px-2 text-3xl ${activeSection === 'websites' ? `${bgInvertedColor} ${textInvertedColor}` : ''}`}>
-                {/* <i className='fi fi-rr-window-alt text-2xl' /> */}
-                <span className='font-[Aeonik Trial]'>Websites</span>
-            </div>
+        <section id='websites' ref={sectionRef} className='relative mx-auto flex max-w-7xl flex-col items-center pb-16 pt-16'>
+            <div className={`mb-6 space-x-2 rounded px-2 text-xl opacity-70`}>Websites</div>
             <div className='grid grid-cols-1 gap-6 md:grid-cols-1'>
                 <ProjectCard project={cleantradesProject} />
                 <ProjectCard project={lightsuiteProject} />
                 <ProjectCard project={lunariaProject} />
-                {/* <ProjectCard project={mapfeedProject} /> */}
             </div>
         </section>
     );

@@ -41,11 +41,8 @@ const Skills = () => {
     }, [dispatch]);
 
     return (
-        <section id='skills' ref={sectionRef} className='mx-auto mt-24 flex max-w-7xl flex-col items-center justify-center space-y-3'>
-            <div className={`mb-6 rounded px-2 text-3xl`}>
-                {/* <i className='fi fi-rr-hammer-crash text-2xl' /> */}
-                <h2 className=''>Current Technologies</h2>
-            </div>
+        <section id='skills' ref={sectionRef} className='mx-auto mt-24 flex max-w-7xl flex-col items-center justify-center'>
+            <div className={`mb-6 rounded text-xl opacity-70`}>Current Technologies</div>
             <div className='flex flex-wrap justify-center gap-3'>
                 <SkillCard skill={nextJsSkill} />
                 <SkillCard skill={reactSkill} />

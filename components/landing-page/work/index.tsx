@@ -41,11 +41,8 @@ const Work = () => {
     }, [dispatch]);
 
     return (
-        <section id='work' ref={sectionRef} className='relative mx-auto flex w-[400px] max-w-7xl flex-col items-center px-5 pb-36 pt-16 md:w-[530px]'>
-            <div className={`mb-6 space-x-2 text-3xl ${activeSection === 'work' ? `${bg} ${text}` : ''}`}>
-                {/* <i className='fi fi-rr-briefcase text-2xl' /> */}
-                <span className='font-[Aeonik Trial]'>Work Experience</span>
-            </div>
+        <section id='work' ref={sectionRef} className='mx-auto flex w-[400px] flex-col items-center pt-16 md:w-[530px]'>
+            <div className={`mb-6 space-x-2 text-xl opacity-70`}>Work Experience</div>
             <WorkCard workExperience={workExperience} />
         </section>
     );

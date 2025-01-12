@@ -18,7 +18,7 @@ const WebsiteCard = ({ project }: ProjectCardProps) => {
     const text = style.text;
 
     return (
-        <div className={`w-[380px] rounded-lg md:w-[440px] ${border} ${bgSecondary} p-6 transition duration-200`}>
+        <div className={`w-[380px] rounded-lg md:w-[420px] ${border} ${bgSecondary} p-6 transition duration-200`}>
             <div className='flex flex-col items-center justify-between'>
                 <div className='flex items-center'>
                     {/* <Image src={project.logo} alt={`${project.name.toLowerCase()}-logo`} height={24} width={24} /> */}

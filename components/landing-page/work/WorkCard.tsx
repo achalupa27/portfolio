@@ -17,7 +17,7 @@ const WorkCard = ({ workExperience }: Props) => {
     const text = style.text;
 
     return (
-        <div className={`rounded-lg ${border} px-6 py-4 ${bgSecondary}`}>
+        <div key={workExperience.company} className={`rounded-lg ${border} px-6 py-4 ${bgSecondary}`}>
             <div className='flex flex-col items-center justify-between'>
                 <div className='flex items-center space-x-1'>
                     <div className='text-2xl'>{workExperience.company}</div>
