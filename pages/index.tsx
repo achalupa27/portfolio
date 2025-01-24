@@ -5,8 +5,8 @@ import { selectTheme } from '../redux/slices/themeSlice';
 import Skills from '../components/landing-page/skills';
 import Hero from '../components/landing-page/hero';
 import Experience from '../components/landing-page/experience';
-import Particles from '@/components/ui/particles';
-import { Meteors } from '@/components/ui/meteors';
+import Particles from '../components/ui/particles';
+import { Meteors } from '../components/ui/meteors';
 import { themes } from '../themes';
 
 const Home = () => {

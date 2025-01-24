@@ -7,13 +7,11 @@ import LinkedInIcon from '../../icons/LinkedInIcon';
 
 const Hero = () => {
     const selectedTheme = useAppSelector(selectTheme);
-    const style = themes[selectedTheme];
-    const bgSecondary = style.bgSecondary;
-    const border = style.border;
+    const { bgSecondary, border, rounded } = themes[selectedTheme];
 
     return (
         <section id='hero' className='flex'>
-            <div className={`z-10 flex w-full flex-col rounded px-8 py-6  ${border} ${bgSecondary}`}>
+            <div className={`z-10 flex w-full flex-col px-8 py-6 ${rounded} ${border} ${bgSecondary}`}>
                 <CanadaFlag />
                 {/* <Logo /> */}
                 <div className='flex items-center justify-between'>
@@ -26,9 +24,6 @@ const Hero = () => {
                         <a href='https://www.linkedin.com/in/andrew-chalupa-b03b57262/' target='_blank' className={`flex h-8 w-8 items-center justify-center rounded transition duration-100 hover:-translate-y-0.5 hover:scale-105`}>
                             <LinkedInIcon />
                         </a>
-                        {/* <a href='https://www.linkedin.com/in/andrew-chalupa-b03b57262/' target='_blank' className='flex h-8 w-8 items-center justify-center transition duration-100 hover:-translate-y-0.5 hover:scale-105'>
-                            <i className='fi fi-sr-file-pdf text-[20px] leading-[0px]' />
-                        </a> */}
                     </div>
                 </div>
                 <div className='flex items-center space-x-2 text-sm opacity-60'>

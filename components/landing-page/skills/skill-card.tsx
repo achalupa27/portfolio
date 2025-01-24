@@ -9,10 +9,7 @@ interface SkillCardProps {
 
 const SkillCard = ({ skill }: SkillCardProps) => {
     const selectedTheme = useAppSelector(selectTheme);
-    const style = themes[selectedTheme];
-    const bgSecondary = style.bgSecondary;
-    const bg = style.bg;
-    const border = style.border;
+    const { bgSecondary, bg } = themes[selectedTheme];
 
     const getCustomIcon = (skill: Skill, selectedTheme: ThemeName) => {
         if (selectedTheme === 'dark' || selectedTheme === 'space') {

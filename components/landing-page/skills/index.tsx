@@ -5,20 +5,15 @@ import { getThemeStyles } from '../../../utils/themeUtils';
 import SkillCard from './skill-card';
 import { nextJsSkill, postgresSkill, pythonSkill, reactSkill, reduxSkill, stripeSkill, supabaseSkill, tailwindSkill, typescriptSkill, vercelSkill } from '../../../data/skillData';
 import { themes } from '../../../themes';
-import { TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';
 import { Tabs } from '@radix-ui/react-tabs';
 
 const Skills = () => {
-    const theme = useAppSelector(selectTheme);
-    const sectionRef = useRef(null);
-
-    const styles = getThemeStyles(theme);
-    const bgInvertedColor = styles.border;
-    const textInvertedColor = styles.buttonHover;
-    const themeColors = themes[theme];
+    const selectedTheme = useAppSelector(selectTheme);
+    const { bgSecondary, border, rounded } = themes[selectedTheme];
 
     return (
-        <section id='skills' ref={sectionRef} className='mt-12'>
+        <section id='skills' className='mt-12'>
             <Tabs defaultValue='current' className='space-y-0'>
                 <TabsList className='w-full justify-start rounded-b-none border border-b-0 bg-white'>
                     <TabsTrigger value='current'>Current Technologies</TabsTrigger>

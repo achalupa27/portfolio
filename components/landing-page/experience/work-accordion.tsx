@@ -1,20 +1,14 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { cleantradesProject, lightsuiteProject, lunariaProject } from '../../../data/websiteData';
-import WebsiteCard from './website-card';
-import CleanTradesLogo from '../../icons/CleanTradesLogo';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../ui/accordion';
 import { useAppSelector } from '../../../redux/hooks';
 import { selectTheme } from '../../../redux/slices/themeSlice';
 import { themes } from '../../../themes';
-import LunariaLogo from '../../icons/LunariaLogo';
-import LightSuiteLogo from '../../icons/LightSuiteLogo';
 import WorkCard from './work-card';
 import { workExperience } from '../../../data/workData';
+import Image from 'next/image';
 
 const WorkAccordion = () => {
     const selectedTheme = useAppSelector(selectTheme);
-    const style = themes[selectedTheme];
-    const bgSecondary = style.bgSecondary;
-    const bg = style.bg;
+    const { bgSecondary, bg } = themes[selectedTheme];
 
     return (
         <div className='h-full rounded rounded-t-none border bg-white px-4 py-4'>
@@ -23,7 +17,7 @@ const WorkAccordion = () => {
                     <AccordionTrigger className='p-0'>
                         <div className='flex items-center space-x-3'>
                             <div className={`flex h-12 w-12 items-center justify-center rounded ${bg} p-2`}>
-                                <img src='vgmeats.png' alt='vgmeats logo' className='h-5 w-6' />
+                                <Image src='/vgmeats.png' alt='vgmeats logo' width={24} height={20} />
                                 {/* <VGMeatsLogo /> */}
                             </div>
                             <div>

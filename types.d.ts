@@ -5,6 +5,7 @@ interface ThemeColors {
     bg: string;
     bgSecondary: string;
     border: string;
+    rounded: string;
     hover: {
         bg: string;
         text: string;

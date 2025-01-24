@@ -10,11 +10,7 @@ type Props = {
 
 const WorkCard = ({ workExperience }: Props) => {
     const selectedTheme = useAppSelector(selectTheme);
-    const style = themes[selectedTheme];
-    const bgSecondary = style.bgSecondary;
-    const bg = style.bg;
-    const border = style.border;
-    const text = style.text;
+    const { bg } = themes[selectedTheme];
 
     return (
         <div key={workExperience.company} className={``}>
@@ -22,7 +18,7 @@ const WorkCard = ({ workExperience }: Props) => {
                 {workExperience.responsibilities.map((responsibility, index) => (
                     <div key={index} className='flex flex-col'>
                         <div>{responsibility}</div>
-                        {index < workExperience.responsibilities.length - 1 && <i className='fi fi-rr-arrow-small-down pt-0.5 text-xs opacity-50' />}
+                        {index < workExperience.responsibilities.length - 1 && <div>↓</div>}
                     </div>
                 ))}
             </div>
@@ -38,7 +34,7 @@ const WorkCard = ({ workExperience }: Props) => {
                 <h4 className='mb-2'>Technologies Used</h4>
                 <div className='flex flex-wrap gap-2'>
                     {workExperience.technologies.map((tech, index) => (
-                        <div className={`flex items-center space-x-1 rounded ${bg} px-2 py-2 group-hover:py-0 group-hover:pb-[1px]`}>
+                        <div key={index} className={`flex items-center space-x-1 rounded ${bg} px-2 py-2 group-hover:py-0 group-hover:pb-[1px]`}>
                             <Image key={index} src={tech.logo} alt={tech.name} width={16} height={16} />
                             <p className='hidden text-xs opacity-70 group-hover:block'>{tech.name}</p>
                         </div>

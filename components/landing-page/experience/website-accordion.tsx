@@ -1,4 +1,4 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../ui/accordion';
 import { cleantradesProject, lightsuiteProject, lunariaProject } from '../../../data/websiteData';
 import WebsiteCard from './website-card';
 import CleanTradesLogo from '../../icons/CleanTradesLogo';
@@ -10,16 +10,14 @@ import LightSuiteLogo from '../../icons/LightSuiteLogo';
 
 const WebsiteAccordion = () => {
     const selectedTheme = useAppSelector(selectTheme);
-    const style = themes[selectedTheme];
-    const bgSecondary = style.bgSecondary;
-    const bg = style.bg;
+    const { bgSecondary, bg } = themes[selectedTheme];
 
     return (
-        <div className='h-full overflow-y-auto rounded rounded-t-none border bg-white px-4 py-4'>
-            <Accordion type='single' collapsible defaultValue='item-1'>
-                <AccordionItem value='item-1'>
+        <div className={`h-full overflow-y-auto rounded rounded-t-none border px-4 py-4 ${bgSecondary}`}>
+            <Accordion type='single' collapsible defaultValue='item-1' className={`${bgSecondary}`}>
+                <AccordionItem value='item-1' className='border-b-0'>
                     <AccordionTrigger className='p-0'>
-                        <div className='flex items-center space-x-3'>
+                        <div className={`flex items-center space-x-3 ${bgSecondary}`}>
                             <div className={`flex items-center justify-center rounded ${bg} p-2`}>
                                 <CleanTradesLogo />
                             </div>
@@ -33,7 +31,7 @@ const WebsiteAccordion = () => {
                         <WebsiteCard project={cleantradesProject} />
                     </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value='item-2'>
+                <AccordionItem value='item-2' className='border-b-0'>
                     <AccordionTrigger className='flex items-center p-0'>
                         <div className='flex items-center space-x-3 pt-2'>
                             <div className={`flex items-center justify-center rounded ${bg} p-2`}>
@@ -49,7 +47,7 @@ const WebsiteAccordion = () => {
                         <WebsiteCard project={lightsuiteProject} />
                     </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value='item-3'>
+                <AccordionItem value='item-3' className='border-b-0'>
                     <AccordionTrigger className='p-0'>
                         <div className='mt-2 flex items-center space-x-3'>
                             <div className={`flex items-center justify-center rounded ${bg} p-2`}>

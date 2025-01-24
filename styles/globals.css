@@ -10,9 +10,9 @@
     h3 {
         @apply pb-2 text-xs uppercase tracking-widest opacity-70;
     }
-  :root {
 
-        --radius: 0.5rem
+    :root {
+        --radius: 0.5rem;
     }
 }
 
