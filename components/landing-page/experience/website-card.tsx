@@ -18,15 +18,9 @@ const WebsiteCard = ({ project }: ProjectCardProps) => {
     const text = style.text;
 
     return (
-        <div className={`w-[380px] rounded-lg md:w-[420px] ${border} ${bgSecondary} p-6 transition duration-200`}>
-            <div className='flex flex-col items-center justify-between'>
-                <div className='flex items-center'>
-                    {/* <Image src={project.logo} alt={`${project.name.toLowerCase()}-logo`} height={24} width={24} /> */}
-                    <div className='text-2xl'>{project.name}</div>
-                </div>
-                <div>{project.category}</div>
-                <div className='text-sm opacity-70'>{project.period}</div>
-            </div>
+        <div className={`rounded-lg`}>
+            <div className='aspect-video w-full rounded border bg-neutral-100'></div>
+
             <div className='mt-4 flex justify-center group-hover:block'>
                 <div className='flex flex-wrap justify-center gap-1'>
                     {project.technologies.map((tech, index) => (
@@ -36,10 +30,10 @@ const WebsiteCard = ({ project }: ProjectCardProps) => {
                         </div>
                     ))}
                 </div>
-                {/* 
+
                 <Link href={project.url} target='_blank' className={`items-center space-x-1 rounded px-3 transition duration-200  group-hover:flex`}>
                     <i className='fi fi-rr-arrow-up-right-from-square text-xs leading-[0px]'></i>
-                </Link> */}
+                </Link>
             </div>
         </div>
     );

@@ -29,11 +29,11 @@ const SkillCard = ({ skill }: SkillCardProps) => {
     };
 
     return (
-        <div className={`flex w-60 space-x-3 rounded ${border} p-3 ${bgSecondary}`}>
+        <div className={`flex w-60 space-x-3 rounded p-3 ${bgSecondary}`}>
             <div className={`flex items-center justify-center rounded ${bg} p-2`}>
                 <Image src={getCustomIcon(skill, selectedTheme) || skill.logo} alt={`${skill.name.toLowerCase()}-logo`} width={32} height={32} />
             </div>
-            <div className=''>
+            <div>
                 <div>{skill.name}</div>
                 <div className='text-sm opacity-60'>{skill.category}</div>
             </div>

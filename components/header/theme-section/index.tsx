@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../../redux/hooks';
 import { selectTheme } from '../../../redux/slices/themeSlice';
 import { themes } from '../../../themes';
-import ThemeButton from './ThemeButton';
+import ThemeButton from './theme-button';
 
 const ThemeSection = () => {
     const selectedTheme = useAppSelector(selectTheme);

@@ -17,7 +17,9 @@ module.exports = {
     		colors: {},
     		animation: {
     			meteor: 'meteor 5s linear infinite',
-    			gradient: 'gradient 8s linear infinite'
+    			gradient: 'gradient 8s linear infinite',
+    			'accordion-down': 'accordion-down 0.2s ease-out',
+    			'accordion-up': 'accordion-up 0.2s ease-out'
     		},
     		keyframes: {
     			meteor: {
@@ -36,6 +38,22 @@ module.exports = {
     			gradient: {
     				to: {
     					backgroundPosition: 'var(--bg-size) 0'
+    				}
+    			},
+    			'accordion-down': {
+    				from: {
+    					height: '0'
+    				},
+    				to: {
+    					height: 'var(--radix-accordion-content-height)'
+    				}
+    			},
+    			'accordion-up': {
+    				from: {
+    					height: 'var(--radix-accordion-content-height)'
+    				},
+    				to: {
+    					height: '0'
     				}
     			}
     		}
