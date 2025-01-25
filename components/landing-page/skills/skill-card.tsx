@@ -16,7 +16,7 @@ const SkillCard = ({ skill }: SkillCardProps) => {
             <div className={`flex items-center justify-center rounded ${bg} p-2`}>{skill.icon}</div>
             <div>
                 <div>{skill.name}</div>
-                <div className='text-sm opacity-60'>{skill.category}</div>
+                <div className='text-sm opacity-70'>{skill.category}</div>
             </div>
         </div>
     );
