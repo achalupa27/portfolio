@@ -5,6 +5,7 @@ export default function Document() {
         <Html lang='en'>
             <Head>
                 <link rel='icon' href='portfolio.svg' />
+                <meta name='description' content="Andrew Chalupa's Portfolio" />
             </Head>
             <body>
                 <Main />
