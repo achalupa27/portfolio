@@ -1,12 +1,9 @@
-import { useRef } from 'react';
 import { useAppSelector } from '../../../redux/hooks';
 import { selectTheme } from '../../../redux/slices/themeSlice';
-import { getThemeStyles } from '../../../utils/themeUtils';
 import SkillCard from './skill-card';
 import { nextJsSkill, postgresSkill, pythonSkill, reactSkill, reduxSkill, stripeSkill, supabaseSkill, tailwindSkill, typescriptSkill, vercelSkill } from '../../../data/skillData';
 import { themes } from '../../../themes';
-import { TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';
-import { Tabs } from '@radix-ui/react-tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';
 
 const Skills = () => {
     const selectedTheme = useAppSelector(selectTheme);

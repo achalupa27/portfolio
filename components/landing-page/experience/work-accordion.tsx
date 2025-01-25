@@ -18,7 +18,6 @@ const WorkAccordion = () => {
                         <div className='flex items-center space-x-3'>
                             <div className={`flex h-12 w-12 items-center justify-center rounded ${bg} p-2`}>
                                 <Image src='/vgmeats.png' alt='vgmeats logo' width={24} height={20} />
-                                {/* <VGMeatsLogo /> */}
                             </div>
                             <div>
                                 <div>{'VG Meats'}</div>

@@ -35,7 +35,7 @@ const WorkCard = ({ workExperience }: Props) => {
                 <div className='flex flex-wrap gap-2'>
                     {workExperience.technologies.map((tech, index) => (
                         <div key={index} className={`flex items-center space-x-1 rounded ${bg} px-2 py-2 group-hover:py-0 group-hover:pb-[1px]`}>
-                            <Image key={index} src={tech.logo} alt={tech.name} width={16} height={16} />
+                            {tech.icon}
                             <p className='hidden text-xs opacity-70 group-hover:block'>{tech.name}</p>
                         </div>
                     ))}

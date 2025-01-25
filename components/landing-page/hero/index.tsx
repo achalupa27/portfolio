@@ -1,9 +1,9 @@
 import { useAppSelector } from '../../../redux/hooks';
 import { selectTheme } from '../../../redux/slices/themeSlice';
 import { themes } from '../../../themes';
-import CanadaFlag from '../../icons/CanadaFlag';
-import GitHubIcon from '../../icons/GitHub';
-import LinkedInIcon from '../../icons/LinkedInIcon';
+import CanadaFlag from '../../icons/socials/CanadaFlag';
+import GitHubIcon from '../../icons/socials/GitHub';
+import LinkedInIcon from '../../icons/socials/LinkedInIcon';
 
 const Hero = () => {
     const selectedTheme = useAppSelector(selectTheme);

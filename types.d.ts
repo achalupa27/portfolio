@@ -35,16 +35,12 @@ interface Project {
     url: string;
     category: string;
     period: string;
-    technologies: Array<{
-        name: string;
-        src: string;
-        alt: string;
-    }>;
+    technologies: Skill[];
     hasWalkthrough?: boolean;
 }
 
 interface Skill {
     name: string;
-    logo: string;
+    icon: JSX.Element;
     category?: string;
 }
