@@ -1,9 +1,9 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../ui/accordion';
-import { useAppSelector } from '../../../redux/hooks';
-import { selectTheme } from '../../../redux/slices/themeSlice';
-import { themes } from '../../../themes';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
+import { workExperience } from '../../data/workData';
+import { useAppSelector } from '../../redux/hooks';
+import { selectTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 import WorkCard from './work-card';
-import { workExperience } from '../../../data/workData';
 import Image from 'next/image';
 
 const WorkAccordion = () => {

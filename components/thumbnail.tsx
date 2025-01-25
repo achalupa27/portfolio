@@ -1,7 +1,6 @@
-import React from 'react';
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useAppSelector } from '../redux/hooks';
+import { selectTheme } from '../redux/slices/themeSlice';
+import { themes } from '../themes';
 
 type Props = {
     icon: React.ReactNode;

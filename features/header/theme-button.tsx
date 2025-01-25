@@ -1,6 +1,6 @@
-import { useAppSelector, useAppDispatch } from '../../../../redux/hooks';
-import { selectTheme, setTheme } from '../../../../redux/slices/themeSlice';
-import { themes } from '../../../../themes';
+import { useAppSelector, useAppDispatch } from '../../redux/hooks';
+import { selectTheme, setTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 
 interface ThemeButtonProps {
     themeType: ThemeName;

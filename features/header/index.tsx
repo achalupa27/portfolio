@@ -1,4 +1,4 @@
-import ThemeSection from './theme-section';
+import ThemeSection from './theme-menu';
 
 const Header = () => {
     return (

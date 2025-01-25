@@ -1,8 +1,7 @@
-import Image from 'next/image';
-import { useAppSelector } from '../../../redux/hooks';
-import { selectTheme } from '../../../redux/slices/themeSlice';
 import Link from 'next/link';
-import { themes } from '../../../themes';
+import { useAppSelector } from '../../redux/hooks';
+import { selectTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 
 interface ProjectCardProps {
     project: Project;

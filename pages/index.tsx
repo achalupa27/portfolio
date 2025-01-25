@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import Header from '../components/header';
+import Header from '../features/header';
 import { useAppSelector } from '../redux/hooks';
 import { selectTheme } from '../redux/slices/themeSlice';
-import Skills from '../components/landing-page/skills';
-import Hero from '../components/landing-page/hero';
-import Experience from '../components/landing-page/experience';
 import { themes } from '../themes';
 import Meteors from '../components/ui/meteors';
 import Particles from '../components/ui/particles';
+import Experience from '../features/experience';
+import Hero from '../features/hero';
+import Skills from '../features/skills';
 
 const Home = () => {
     const selectedTheme = useAppSelector(selectTheme);

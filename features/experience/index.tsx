@@ -1,7 +1,7 @@
-import { useAppSelector } from '../../../redux/hooks';
-import { selectTheme } from '../../../redux/slices/themeSlice';
-import { themes } from '../../../themes';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
+import { useAppSelector } from '../../redux/hooks';
+import { selectTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 import WebsiteAccordion from './website-accordion';
 import WorkAccordion from './work-accordion';
 

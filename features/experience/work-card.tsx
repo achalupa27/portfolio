@@ -1,8 +1,8 @@
 // WorkCard.jsx
-import Image from 'next/image';
-import { useAppSelector } from '../../../redux/hooks';
-import { selectTheme } from '../../../redux/slices/themeSlice';
-import { themes } from '../../../themes';
+
+import { useAppSelector } from '../../redux/hooks';
+import { selectTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 
 type Props = {
     workExperience: WorkExperience;

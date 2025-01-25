@@ -1,12 +1,12 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../ui/accordion';
-import { cleantradesProject, lightsuiteProject, lunariaProject } from '../../../data/websiteData';
-import { useAppSelector } from '../../../redux/hooks';
-import { selectTheme } from '../../../redux/slices/themeSlice';
-import { themes } from '../../../themes';
+import CleanTradesLogo from '../../components/icons/logos/CleanTradesLogo';
+import LightSuiteLogo from '../../components/icons/logos/LightSuiteLogo';
+import LunariaLogo from '../../components/icons/logos/LunariaLogo';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
+import { cleantradesProject, lightsuiteProject, lunariaProject } from '../../data/websiteData';
+import { useAppSelector } from '../../redux/hooks';
+import { selectTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 import WebsiteCard from './website-card';
-import CleanTradesLogo from '../../icons/logos/CleanTradesLogo';
-import LunariaLogo from '../../icons/logos/LunariaLogo';
-import LightSuiteLogo from '../../icons/logos/LightSuiteLogo';
 
 const WebsiteAccordion = () => {
     const selectedTheme = useAppSelector(selectTheme);

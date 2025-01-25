@@ -1,7 +1,7 @@
-import { themes } from '../../../themes';
-import { useAppSelector } from '../../../redux/hooks';
-import { selectTheme } from '../../../redux/slices/themeSlice';
-import Thumbnail from '../thumbnail';
+import Thumbnail from '../../components/thumbnail';
+import { useAppSelector } from '../../redux/hooks';
+import { selectTheme } from '../../redux/slices/themeSlice';
+import { themes } from '../../themes';
 
 interface SkillCardProps {
     skill: Skill;
