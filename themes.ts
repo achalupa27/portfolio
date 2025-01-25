@@ -3,8 +3,8 @@ export const themes: Record<ThemeName, ThemeColors> = {
         text: 'text-neutral-900',
         bg: 'bg-neutral-100',
         bgSecondary: 'bg-white',
-        border: 'border border-neutral-200',
-        rounded: 'rounded-lg',
+        border: 'border border-neutral-200 rounded-lg',
+        // rounded: 'rounded-lg',
         hover: {
             bg: 'hover:bg-neutral-900',
             text: 'hover:text-neutral-100',
@@ -19,8 +19,8 @@ export const themes: Record<ThemeName, ThemeColors> = {
         text: 'text-neutral-100',
         bg: 'bg-neutral-950',
         bgSecondary: 'bg-neutral-900',
-        border: 'border border-neutral-800',
-        rounded: 'rounded-0',
+        border: 'border border-neutral-800 rounded-0',
+        // rounded: 'rounded-0',
         hover: {
             bg: 'hover:bg-white',
             text: 'hover:text-black',

@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+    @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter/inter-medium.woff') format('woff');
+        font-weight: 500; /* Adjust weight to match the font */
+        font-style: normal; /* Adjust style (normal, italic, etc.) */
+    }
+    @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter/inter-regular.woff') format('woff');
+        font-weight: 400; /* Adjust weight to match the font */
+        font-style: normal; /* Adjust style (normal, italic, etc.) */
+    }
+
     :root {
         --radius: 0.5rem;
     }

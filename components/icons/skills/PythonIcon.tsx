@@ -3,12 +3,12 @@ const PythonIcon = ({ width = 24, height = 24 }) => {
         <svg width={width} height={height} viewBox='0 0 256 255' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet'>
             <defs>
                 <linearGradient x1='12.959%' y1='12.039%' x2='79.639%' y2='78.201%' id='a'>
-                    <stop stop-color='#387EB8' offset='0%' />
-                    <stop stop-color='#366994' offset='100%' />
+                    <stop stopColor='#387EB8' offset='0%' />
+                    <stop stopColor='#366994' offset='100%' />
                 </linearGradient>
                 <linearGradient x1='19.128%' y1='20.579%' x2='90.742%' y2='88.429%' id='b'>
-                    <stop stop-color='#FFE052' offset='0%' />
-                    <stop stop-color='#FFC331' offset='100%' />
+                    <stop stopColor='#FFE052' offset='0%' />
+                    <stop stopColor='#FFC331' offset='100%' />
                 </linearGradient>
             </defs>
             <path d='M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z' fill='url(#a)' />
