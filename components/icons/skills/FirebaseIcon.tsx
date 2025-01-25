@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FirebaseIcon = ({ width = 24, height = 24 }) => {
     return (
         <svg width={width} height={height} viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'>

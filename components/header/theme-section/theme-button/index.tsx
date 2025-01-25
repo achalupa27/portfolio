@@ -15,11 +15,15 @@ const ThemeButton = ({ themeType, icon }: ThemeButtonProps) => {
     const isActive = theme === themeType;
 
     if (isActive) {
-        return <button className={`duration-50 flex items-center justify-center rounded p-2 transition ${themeStyles.inverted.bg} ${themeStyles.inverted.text}`}>{icon}</button>;
+        return (
+            <button aria-label={`${themeType} theme button`} className={`duration-50 flex items-center justify-center rounded p-2 transition ${themeStyles.inverted.bg} ${themeStyles.inverted.text}`}>
+                {icon}
+            </button>
+        );
     }
 
     return (
-        <button className={`duration-50 flex items-center justify-center rounded p-2 transition hover:${themeStyles.inverted.bg} hover:${themeStyles.inverted.text}`} onClick={() => dispatch(setTheme(themeType))}>
+        <button aria-label={`${themeType} theme button`} className={`duration-50 flex items-center justify-center rounded p-2 transition hover:${themeStyles.inverted.bg} hover:${themeStyles.inverted.text}`} onClick={() => dispatch(setTheme(themeType))}>
             {icon}
         </button>
     );
