@@ -26,8 +26,8 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
-                <div className='flex items-center space-x-2 text-sm opacity-70'>
-                    <p className='-mt-1'>B.Sc. Computer Science</p>
+                <div className='flex items-center space-x-2 text-sm opacity-90'>
+                    <p className='-mt-1.5'>B.Sc. Computer Science</p>
                 </div>
                 <p className='mt-3 font-medium'>
                     Full-Stack Developer <br className='md:hidden' />

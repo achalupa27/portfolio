@@ -21,7 +21,7 @@ const WorkAccordion = () => {
                             </div>
                             <div>
                                 <div>{'VG Meats'}</div>
-                                <div className='text-sm opacity-70'>{'Lead Developer • 2022 - Present'}</div>
+                                <div className='text-sm opacity-80'>{'Lead Developer • 2022 - Present'}</div>
                             </div>
                         </div>
                     </AccordionTrigger>
