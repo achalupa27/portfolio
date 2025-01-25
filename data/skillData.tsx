@@ -1,5 +1,3 @@
-import { FigmaIcon } from 'lucide-react';
-import React from 'react';
 import PostgreSQLIcon from '../components/icons/skills/PostgreSQLIcon';
 import PythonIcon from '../components/icons/skills/PythonIcon';
 import ReactIcon from '../components/icons/skills/ReactIcon';

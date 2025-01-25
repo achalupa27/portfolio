@@ -19,18 +19,13 @@ const Experience = () => {
                     <TabsTrigger className='w-full' value='websites'>
                         Websites
                     </TabsTrigger>
-                    {/* <TabsTrigger className='w-full' value='apps'>
-                        Mobile Apps
-                    </TabsTrigger> */}
                 </TabsList>
                 <TabsContent value='work'>
                     <WorkAccordion />
-                    {/* <WorkCard workExperience={workExperience} /> */}
                 </TabsContent>
                 <TabsContent value='websites'>
                     <WebsiteAccordion />
                 </TabsContent>
-                {/* <TabsContent value='apps'>LightMind</TabsContent> */}
             </Tabs>
         </section>
     );
