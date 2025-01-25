@@ -23,7 +23,7 @@ const WebsiteAccordion = () => {
                             </div>
                             <div>
                                 <div className='text-base'>{'CleanTrades'}</div>
-                                <div className='text-sm opacity-80'>{'Trading Platform • 2022 - Present'}</div>
+                                <div className='text-sm opacity-70'>{'Trading Platform • 2022 - Present'}</div>
                             </div>
                         </div>
                     </AccordionTrigger>
@@ -39,7 +39,7 @@ const WebsiteAccordion = () => {
                             </div>
                             <div>
                                 <div className='text-base'>{'LightSuite'}</div>
-                                <div className='text-sm opacity-80'>{'Self Improvement'}</div>
+                                <div className='text-sm opacity-70'>{'Self Improvement'}</div>
                             </div>
                         </div>
                     </AccordionTrigger>
@@ -55,7 +55,7 @@ const WebsiteAccordion = () => {
                             </div>
                             <div>
                                 <div className='text-base'>{'Lunaria'}</div>
-                                <div className='text-sm opacity-80'>{'Personal Finance'}</div>
+                                <div className='text-sm opacity-70'>{'Personal Finance'}</div>
                             </div>
                         </div>
                     </AccordionTrigger>

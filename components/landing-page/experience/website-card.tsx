@@ -13,7 +13,7 @@ const WebsiteCard = ({ project }: ProjectCardProps) => {
     const { bgSecondary, bg } = themes[selectedTheme];
 
     return (
-        <div className={`rounded-lg`}>
+        <div className={`mt-4 rounded-lg`}>
             <div className='aspect-video w-full rounded border bg-neutral-100'></div>
 
             <div className='mt-4 flex justify-center group-hover:block'>
