@@ -11,17 +11,17 @@ const WorkAccordion = () => {
     const { bgSecondary, bg } = themes[selectedTheme];
 
     return (
-        <div className='h-full rounded rounded-t-none border bg-white px-4 py-4'>
+        <div className={`h-full rounded rounded-t-none border ${bgSecondary} px-4 py-4`}>
             <Accordion type='single' collapsible defaultValue='item-1'>
                 <AccordionItem value='item-1'>
                     <AccordionTrigger className='p-0'>
                         <div className='flex items-center space-x-3'>
-                            <div className={`flex h-12 w-12 items-center justify-center rounded ${bg} p-2`}>
+                            <div className={`z-10 flex h-12 w-12 items-center justify-center rounded ${bg} p-2`}>
                                 <Image src='/vgmeats.png' alt='vgmeats logo' width={24} height={20} />
                             </div>
                             <div>
                                 <div>{'VG Meats'}</div>
-                                <div className='text-sm opacity-80'>{'Lead Developer • 2022 - Present'}</div>
+                                <p className='text-sm opacity-80'>{'Lead Developer • 2022 - Present'}</p>
                             </div>
                         </div>
                     </AccordionTrigger>

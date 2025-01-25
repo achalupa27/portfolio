@@ -4,6 +4,7 @@ import { themes } from '../../../themes';
 import CanadaFlag from '../../icons/socials/CanadaFlag';
 import GitHubIcon from '../../icons/socials/GitHub';
 import LinkedInIcon from '../../icons/socials/LinkedInIcon';
+import Image from 'next/image';
 
 const Hero = () => {
     const selectedTheme = useAppSelector(selectTheme);
@@ -28,6 +29,7 @@ const Hero = () => {
                 </div>
                 <div className='flex items-center space-x-2 text-sm opacity-90'>
                     <p className='-mt-1.5'>B.Sc. Computer Science</p>
+                    <Image src='/vgmeats.png' alt='vgmeats logo' width={24} height={20} />
                 </div>
                 <p className='mt-3 font-medium'>
                     Full-Stack Developer <br className='md:hidden' />

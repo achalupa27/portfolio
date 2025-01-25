@@ -7,12 +7,12 @@ import WorkAccordion from './work-accordion';
 
 const Experience = () => {
     const selectedTheme = useAppSelector(selectTheme);
-    const { text, rounded } = themes[selectedTheme];
+    const { bgSecondary, text, border, rounded } = themes[selectedTheme];
 
     return (
         <section id='experience'>
             <Tabs defaultValue='work' className='w-full space-y-0'>
-                <TabsList className='w-full justify-around rounded-b-none border border-b-0 bg-white'>
+                <TabsList className={`w-full justify-around rounded-b-none ${border} border-b-0 ${bgSecondary}`}>
                     <TabsTrigger className='w-full ' value='work'>
                         Work Experience
                     </TabsTrigger>
