@@ -1,4 +1,4 @@
-import Thumbnail from '../../components/thumbnail';
+import Thumbnail from '../../components/ui/thumbnail';
 import { useAppSelector } from '../../redux/hooks';
 import { selectTheme } from '../../redux/slices/themeSlice';
 import { themes } from '../../themes';

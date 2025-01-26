@@ -8,6 +8,7 @@ import Particles from '../components/ui/particles';
 import Experience from '../features/experience';
 import Hero from '../features/hero';
 import Skills from '../features/skills';
+import ThemeMenu from '../features/header/theme-menu';
 
 const Home = () => {
     const selectedTheme = useAppSelector(selectTheme);
@@ -22,7 +23,7 @@ const Home = () => {
             <Head>
                 <title>Andrew Chalupa</title>
             </Head>
-            <Header />
+            <ThemeMenu />
             <div className='mx-auto flex max-w-screen-2xl justify-center space-x-12'>
                 <div className='w-[50%]'>
                     <Hero />
@@ -32,7 +33,6 @@ const Home = () => {
                     <Experience />
                 </div>
             </div>
-            {/* <Footer /> */}
         </div>
     );
 };
