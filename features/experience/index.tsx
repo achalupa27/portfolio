@@ -12,7 +12,7 @@ const Experience = () => {
     return (
         <section id='experience'>
             <Tabs defaultValue='work' className='w-full space-y-0'>
-                <TabsList className={`w-full justify-around rounded-b-none ${border} border-b-0 ${bgSecondary}`}>
+                <TabsList className={`w-full justify-around ${rounded} rounded-b-none ${border} border-b-0 ${bgSecondary}`}>
                     <TabsTrigger className='w-full ' value='work'>
                         Work Experience
                     </TabsTrigger>

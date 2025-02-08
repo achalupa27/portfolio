@@ -10,10 +10,10 @@ import WebsiteCard from './website-card';
 
 const WebsiteAccordion = () => {
     const selectedTheme = useAppSelector(selectTheme);
-    const { border, bgSecondary, bg } = themes[selectedTheme];
+    const { border, bgSecondary, bg, rounded } = themes[selectedTheme];
 
     return (
-        <div className={`h-full overflow-y-auto rounded rounded-t-none  ${border} px-4 py-4 ${bgSecondary}`}>
+        <div className={`h-full overflow-y-auto ${rounded} rounded-t-none  ${border} px-4 py-4 ${bgSecondary}`}>
             <Accordion type='single' collapsible defaultValue='item-1' className={`${bgSecondary}`}>
                 <AccordionItem value='item-1' className='border-b-0'>
                     <AccordionTrigger className='p-0'>

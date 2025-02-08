@@ -3,8 +3,9 @@ export const themes: Record<ThemeName, ThemeColors> = {
         text: 'text-neutral-900',
         bg: 'bg-neutral-100',
         bgSecondary: 'bg-white',
-        border: 'border border-neutral-200 rounded-lg',
-        // rounded: 'rounded-lg',
+        border: 'border border-neutral-200',
+        rounded: 'rounded-lg',
+        font: 'font-[Inter]',
         hover: {
             bg: 'hover:bg-neutral-900',
             text: 'hover:text-neutral-100',
@@ -19,8 +20,9 @@ export const themes: Record<ThemeName, ThemeColors> = {
         text: 'text-neutral-100',
         bg: 'bg-neutral-950',
         bgSecondary: 'bg-neutral-900',
-        border: 'border border-neutral-800 rounded-0',
-        // rounded: 'rounded-0',
+        border: 'border border-neutral-800',
+        rounded: 'rounded-none',
+        font: 'font-sans',
         hover: {
             bg: 'hover:bg-white',
             text: 'hover:text-black',
@@ -34,7 +36,9 @@ export const themes: Record<ThemeName, ThemeColors> = {
     ice: {
         text: 'text-white',
         bg: 'bg-[#9db3b4]',
+        bgSecondary: '',
         border: 'border border-white',
+        rounded: 'rounded-sm',
         hover: {
             bg: 'hover:bg-white',
             text: 'hover:text-[#9db3b4]',
@@ -44,6 +48,7 @@ export const themes: Record<ThemeName, ThemeColors> = {
             text: 'text-[#9db3b4]',
             bg: 'bg-white',
         },
+        font: '',
     },
     water: {
         text: 'text-white',
@@ -58,11 +63,17 @@ export const themes: Record<ThemeName, ThemeColors> = {
             text: 'text-blue-600',
             bg: 'bg-white',
         },
+        bgSecondary: '',
+        rounded: '',
+        font: '',
     },
     earth: {
-        text: 'text-green-600',
-        bg: 'bg-[#422211]',
-        border: 'border border-green-600',
+        text: 'text-stone-900',
+        bg: 'bg-orange-50',
+        bgSecondary: 'bg-white',
+        border: 'border border-stone-200',
+        rounded: 'rounded-lg',
+        font: 'font-serif',
         hover: {
             bg: 'hover:bg-green-600',
             text: 'hover:text-[#422211]',
@@ -86,6 +97,9 @@ export const themes: Record<ThemeName, ThemeColors> = {
             text: 'text-red-500',
             bg: 'bg-black',
         },
+        bgSecondary: '',
+        rounded: '',
+        font: '',
     },
     rain: {
         text: 'text-stone-900',
@@ -100,6 +114,9 @@ export const themes: Record<ThemeName, ThemeColors> = {
             text: 'text-gray-400',
             bg: 'bg-stone-800',
         },
+        bgSecondary: '',
+        rounded: '',
+        font: '',
     },
     wind: {
         text: 'text-stone-700',
@@ -114,6 +131,9 @@ export const themes: Record<ThemeName, ThemeColors> = {
             text: 'text-gray-100',
             bg: 'bg-stone-700',
         },
+        bgSecondary: '',
+        rounded: '',
+        font: '',
     },
     space: {
         text: 'text-white',
@@ -128,5 +148,8 @@ export const themes: Record<ThemeName, ThemeColors> = {
             text: 'text-black',
             bg: 'bg-white',
         },
+        bgSecondary: '',
+        rounded: '',
+        font: '',
     },
 };

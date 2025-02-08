@@ -17,10 +17,11 @@ const div = () => {
     const style = themes[selectedTheme];
     const border = style.border;
     const bgSecondary = style.bgSecondary;
+    const rounded = style.rounded;
 
     return (
         <header className='relative'>
-            <div className={`fixed left-1/2 top-4 z-50 mx-auto flex w-fit -translate-x-1/2 transform items-center justify-center space-x-1 rounded ${border} bg-opacity-30 ${bgSecondary} p-2 shadow backdrop-blur-lg`}>
+            <div className={`fixed left-1/2 top-4 z-50 mx-auto flex w-fit -translate-x-1/2 transform items-center justify-center space-x-1 ${rounded} ${border} bg-opacity-30 ${bgSecondary} p-2 shadow backdrop-blur-lg`}>
                 <ThemeButton themeType='light' icon={<Light />} />
                 <ThemeButton themeType='dark' icon={<Dark />} />
                 <ThemeButton themeType='ice' icon={<Ice />} />

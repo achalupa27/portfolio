@@ -3,9 +3,9 @@ module.exports = {
     darkMode: ['class'],
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './features/**/*.{js,ts,jsx,tsx}', './themes.ts', './src/components/**/*.{js,ts,jsx,tsx}'],
     theme: {
-        fontFamily: {
-            sans: ['Inter'],
-        },
+        // fontFamily: {
+        //     sans: ['Inter'],
+        // },
         extend: {
             borderRadius: {
                 lg: 'var(--radius)',

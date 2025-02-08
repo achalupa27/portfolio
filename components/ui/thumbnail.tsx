@@ -9,9 +9,9 @@ type Props = {
 
 const Thumbnail = ({ icon, size }: Props) => {
     const selectedTheme = useAppSelector(selectTheme);
-    const { bgSecondary, bg } = themes[selectedTheme];
+    const { bgSecondary, bg, rounded } = themes[selectedTheme];
 
-    return <div className={`flex items-center justify-center rounded ${bg} p-2`}>{icon}</div>;
+    return <div className={`flex items-center justify-center ${rounded} ${bg} p-2`}>{icon}</div>;
 };
 
 export default Thumbnail;

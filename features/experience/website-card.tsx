@@ -9,11 +9,11 @@ interface ProjectCardProps {
 
 const WebsiteCard = ({ project }: ProjectCardProps) => {
     const selectedTheme = useAppSelector(selectTheme);
-    const { bgSecondary, bg, border } = themes[selectedTheme];
+    const { bgSecondary, bg, border, rounded } = themes[selectedTheme];
 
     return (
-        <div className={`mt-4 rounded-lg`}>
-            <div className={`aspect-video w-full rounded ${bg}`}></div>
+        <div className={`mt-4 ${rounded}`}>
+            <div className={`aspect-video w-full ${rounded} ${bg}`}></div>
 
             <div className='mt-4 flex justify-center group-hover:block'>
                 <div className='flex flex-wrap justify-center gap-1'>

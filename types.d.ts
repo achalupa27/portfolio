@@ -15,6 +15,7 @@ interface ThemeColors {
         text: string;
         bg: string;
     };
+    font: string;
 }
 
 interface WorkExperience {

@@ -1,6 +1,6 @@
 {
     "version": "0.2",
-    "words": ["nocompatible"],
+    "words": ["nocompatible", "supabase", "firestore", "cleantrades", "lightsuite", "vgmeats", "chalupa", "staticity"],
     "ignorePaths": ["package.json", "package-lock.json"],
     "useGitignore": true,
     "validateDirectives": true,

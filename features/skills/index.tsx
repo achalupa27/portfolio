@@ -12,7 +12,7 @@ const Skills = () => {
     return (
         <section id='skills' className='mt-12'>
             <Tabs defaultValue='current' className='space-y-0'>
-                <TabsList className={`w-full justify-start rounded-b-none ${border} border-b-0 ${bgSecondary}`}>
+                <TabsList className={`w-full justify-start ${rounded} rounded-b-none ${border} border-b-0 ${bgSecondary}`}>
                     <TabsTrigger value='current'>Current Technologies</TabsTrigger>
                     {/* <TabsTrigger value='password'>Past Technologies</TabsTrigger>
                     <TabsTrigger value='future'>Future Technologies</TabsTrigger> */}

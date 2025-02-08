@@ -8,10 +8,10 @@ import Image from 'next/image';
 
 const WorkAccordion = () => {
     const selectedTheme = useAppSelector(selectTheme);
-    const { border, bgSecondary, bg } = themes[selectedTheme];
+    const { border, bgSecondary, bg, rounded } = themes[selectedTheme];
 
     return (
-        <div className={`h-full rounded rounded-t-none ${border} ${bgSecondary} px-4 py-4`}>
+        <div className={`h-full ${rounded} rounded-t-none ${border} ${bgSecondary} px-4 py-4`}>
             <Accordion type='single' collapsible defaultValue='item-1'>
                 <AccordionItem value='item-1' className='border-b-0'>
                     <AccordionTrigger className='p-0'>
