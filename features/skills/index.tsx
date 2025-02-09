@@ -9,7 +9,7 @@ const Skills = () => {
         <section id='skills' className='mt-12'>
             <div>
                 <div className={`w-full justify-start px-2.5 py-1.5 text-sm ${rounded} rounded-b-none ${border} border-b-0 ${bgSecondary}`}>Current Technologies</div>
-                <div className={`grid w-full grid-cols-2 gap-3 ${rounded} rounded-t-none ${border} ${bgSecondary} p-2`}>
+                <div className={`grid w-full grid-cols-1 gap-3 sm:grid-cols-2 ${rounded} rounded-t-none ${border} ${bgSecondary} p-2`}>
                     <SkillCard skill={nextJsSkill} />
                     <SkillCard skill={reactSkill} />
                     <SkillCard skill={typescriptSkill} />

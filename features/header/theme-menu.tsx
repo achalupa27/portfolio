@@ -67,7 +67,7 @@ const ThemeMenu = () => {
 
     return (
         <header className='relative'>
-            <div className={`fixed left-1/2 top-4 z-50 mx-auto flex -translate-x-1/2 transform items-center justify-center space-x-1 ${rounded} ${border} bg-opacity-30 ${bgSecondary} p-2 shadow backdrop-blur-lg transition-all duration-500 ease-in-out ${isGenerating ? 'w-[36rem]' : 'w-[24rem]'}`}>
+            <div className={`fixed left-1/2 top-4 z-50 mx-auto flex -translate-x-1/2 transform items-center justify-center space-x-1 ${rounded} ${border} bg-opacity-30 ${bgSecondary} p-2 shadow backdrop-blur-lg transition-all duration-500 ease-in-out ${isGenerating ? 'w-[24rem] sm:w-[36rem]' : 'w-[24rem]'}`}>
                 {!isGenerating && !isTransitioning ? (
                     <>
                         <ThemeButton themeType='light' icon={<Light />} />
