@@ -13,18 +13,18 @@ const ThemeButton = ({ themeType, icon }: ThemeButtonProps) => {
     const dispatch = useAppDispatch();
 
     const isActive = theme === themeType;
-    const { rounded, invertedBg, invertedText } = useTheme();
+    const { rounded, invertedBg, invertedText, bgSecondary } = useTheme();
 
     if (isActive) {
         return (
-            <button aria-label={`${themeType} theme button`} className={`duration-50 flex items-center justify-center ${rounded} p-2 transition ${invertedBg} ${invertedText}`}>
+            <button aria-label={`${themeType} theme button`} className={`duration-50 flex items-center justify-center p-2 transition ${rounded} ${invertedBg} ${invertedText}`}>
                 {icon}
             </button>
         );
     }
 
     return (
-        <button aria-label={`${themeType} theme button`} className={`duration-50 flex items-center justify-center ${rounded} p-2 transition hover:${invertedBg} hover:${invertedText}`} onClick={() => dispatch(setTheme(themeType))}>
+        <button aria-label={`${themeType} theme button`} className={`duration-50 flex items-center justify-center p-2 transition ${rounded} hover:${bgSecondary} hover:${invertedText}`} onClick={() => dispatch(setTheme(themeType))}>
             {icon}
         </button>
     );

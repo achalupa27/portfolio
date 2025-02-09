@@ -9,17 +9,18 @@ import Hero from '../features/hero';
 import Skills from '../features/skills';
 import ThemeMenu from '../features/header/theme-menu';
 import IceEffects from '../components/ui/ice-effects';
+import { useTheme } from '../hooks/use-theme';
 
 const Home = () => {
     const theme = useAppSelector(selectTheme);
-    const themeStyles = themes[theme];
-    const textColor = themeStyles.text;
-    const bgColor = themeStyles.bg;
-    const font = themeStyles.font;
+    const { text, bg, font } = useTheme();
+    const themes = useAppSelector((state) => state.theme.themes);
+    // console.log('selectedTheme: ', theme);
+    // console.log('allThemes: ', themes);
 
     return (
         <>
-            <div className={`relative ${textColor} ${bgColor} ${font} min-h-screen w-screen p-8 pt-24 lg:p-20 lg:pt-24`}>
+            <div className={`relative ${text} ${bg} ${font} min-h-screen w-screen p-8 pt-24 lg:p-20 lg:pt-24`}>
                 {theme === 'fire' && <Particles className='absolute inset-0 z-0 h-full' quantity={100} ease={80} color={'#000000'} refresh />}
                 {theme === 'space' && <Meteors number={30} />}
                 {theme === 'ice' && <IceEffects />}

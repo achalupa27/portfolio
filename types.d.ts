@@ -1,4 +1,4 @@
-type ThemeName = 'light' | 'dark' | 'ice' | 'water' | 'earth' | 'fire' | 'rain' | 'wind' | 'space';
+type ThemeName = 'light' | 'dark' | 'ice' | 'water' | 'earth' | 'fire' | 'rain' | 'wind' | 'space' | string;
 
 interface ThemeColors {
     text: string;
@@ -6,11 +6,7 @@ interface ThemeColors {
     bgSecondary: string;
     border: string;
     rounded: string;
-    hover: {
-        bg: string;
-        text: string;
-    };
-    placeholder: string;
+    hover: string;
     invertedText: string;
     invertedBg: string;
     font: string;
