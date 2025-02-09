@@ -8,6 +8,7 @@ import Experience from '../features/experience';
 import Hero from '../features/hero';
 import Skills from '../features/skills';
 import ThemeMenu from '../features/header/theme-menu';
+import IceEffects from '../components/ui/ice-effects';
 
 const Home = () => {
     const theme = useAppSelector(selectTheme);
@@ -17,23 +18,27 @@ const Home = () => {
     const font = themeStyles.font;
 
     return (
-        <div className={`${textColor} ${bgColor} ${font} min-h-screen w-screen p-8 pt-24 lg:p-20 lg:pt-24`}>
-            {theme === 'fire' && <Particles className='absolute inset-0 z-0 h-full' quantity={100} ease={80} color={'#000000'} refresh />}
-            {theme === 'space' && <Meteors number={30} />}
-            <Head>
-                <title>Andrew Chalupa</title>
-            </Head>
-            <ThemeMenu />
-            <div className='mx-auto flex max-w-screen-2xl flex-col justify-center gap-12 lg:flex-row'>
-                <div className='lg:w-[50%]'>
-                    <Hero />
-                    <Skills />
-                </div>
-                <div className='lg:w-[60%]'>
-                    <Experience />
+        <>
+            <div className={`relative ${textColor} ${bgColor} ${font} min-h-screen w-screen p-8 pt-24 lg:p-20 lg:pt-24`}>
+                {theme === 'fire' && <Particles className='absolute inset-0 z-0 h-full' quantity={100} ease={80} color={'#000000'} refresh />}
+                {theme === 'space' && <Meteors number={30} />}
+                {theme === 'ice' && <IceEffects />}
+
+                <Head>
+                    <title>Andrew Chalupa</title>
+                </Head>
+                <ThemeMenu />
+                <div className='mx-auto flex max-w-screen-2xl flex-col justify-center gap-12 lg:flex-row'>
+                    <div className='lg:w-[50%]'>
+                        <Hero />
+                        <Skills />
+                    </div>
+                    <div className='lg:w-[60%]'>
+                        <Experience />
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

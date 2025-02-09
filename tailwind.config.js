@@ -18,6 +18,10 @@ module.exports = {
                 gradient: 'gradient 8s linear infinite',
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
+                'frost-shimmer': 'frost-shimmer 3s linear infinite',
+                'ice-float': 'ice-float 3s ease-in-out infinite',
+                'crystal-spin': 'crystal-spin 4s linear infinite',
+                freeze: 'freeze 0.5s ease-out forwards',
             },
             keyframes: {
                 meteor: {
@@ -52,6 +56,42 @@ module.exports = {
                     },
                     to: {
                         height: '0',
+                    },
+                },
+                'frost-shimmer': {
+                    '0%, 100%': {
+                        'background-position': '0% 50%',
+                    },
+                    '50%': {
+                        'background-position': '100% 50%',
+                    },
+                },
+                'ice-float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)',
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)',
+                    },
+                },
+                'crystal-spin': {
+                    '0%': {
+                        transform: 'rotate(0deg)',
+                    },
+                    '100%': {
+                        transform: 'rotate(360deg)',
+                    },
+                },
+                freeze: {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'scale(0.9)',
+                        filter: 'blur(10px)',
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'scale(1)',
+                        filter: 'blur(0)',
                     },
                 },
             },

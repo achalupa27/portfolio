@@ -14,10 +14,8 @@ const Skills = () => {
             <Tabs defaultValue='current' className='space-y-0'>
                 <TabsList className={`w-full justify-start ${rounded} rounded-b-none ${border} border-b-0 ${bgSecondary}`}>
                     <TabsTrigger value='current'>Current Technologies</TabsTrigger>
-                    {/* <TabsTrigger value='password'>Past Technologies</TabsTrigger>
-                    <TabsTrigger value='future'>Future Technologies</TabsTrigger> */}
                 </TabsList>
-                <TabsContent value='current' className={`grid w-full grid-cols-2 gap-3 ${border} ${bgSecondary} p-2`}>
+                <TabsContent value='current' className={`grid w-full grid-cols-2 gap-3 ${rounded} rounded-t-none ${border} ${bgSecondary} p-2`}>
                     <SkillCard skill={nextJsSkill} />
                     <SkillCard skill={reactSkill} />
                     <SkillCard skill={typescriptSkill} />

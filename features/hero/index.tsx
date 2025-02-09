@@ -1,6 +1,7 @@
 import CanadaFlag from '../../components/icons/socials/CanadaFlag';
 import GitHubIcon from '../../components/icons/socials/GitHub';
 import LinkedInIcon from '../../components/icons/socials/LinkedInIcon';
+import MorphingText from '../../components/ui/morphing-text';
 import { useAppSelector } from '../../redux/hooks';
 import { selectTheme } from '../../redux/slices/themeSlice';
 import { themes } from '../../themes';
@@ -14,6 +15,10 @@ const Hero = () => {
             <CanadaFlag />
             {/* <Logo /> */}
             <div className='flex items-center justify-between'>
+                {/* <MorphingText
+                    text='Andrew Chalupa'
+                    className='text-3xl' 
+                /> */}
                 <p className='text-3xl'>Andrew Chalupa</p>
 
                 <div className='flex w-fit items-center justify-start space-x-3 pt-3'>

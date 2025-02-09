@@ -1,0 +1,19 @@
+# Ignore node_modules
+node_modules
+
+.next
+.vercel
+
+# Ignore build outputs
+dist
+build
+
+# Ignore all JSON files
+*.json
+
+# Ignore specific folders
+coverage/
+logs/
+
+# Ignore a specific file
+secret-config.js
