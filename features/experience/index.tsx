@@ -4,7 +4,7 @@ import WebsiteAccordion from './website-accordion';
 import WorkAccordion from './work-accordion';
 
 const Experience = () => {
-    const { bgSecondary, border, rounded, bg } = useTheme();
+    const { bgSecondary, border, rounded } = useTheme();
     const [tab, setTab] = useState('work');
 
     return (

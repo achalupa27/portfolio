@@ -48,6 +48,9 @@ const ThemeMenu = () => {
             const data = await response.json();
             const themeId = `${prompt}-${Date.now()}`;
 
+            console.log('New theme data:', data.theme);
+            console.log('Generated theme ID:', themeId);
+
             // First add the new theme to Redux
             dispatch(addTheme({ id: themeId, theme: data.theme }));
             // Then set it as active

@@ -2,10 +2,133 @@
 module.exports = {
     darkMode: ['class'],
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './features/**/*.{js,ts,jsx,tsx}', './themes.ts', './src/components/**/*.{js,ts,jsx,tsx}'],
+    safelist: [
+        // Base utilities
+        'border',
+        'backdrop-blur-sm',
+
+        // Font families
+        'font-mono',
+        'font-serif',
+        'font-sans',
+        'font-[Inter]',
+
+        // Border radius
+        'rounded-none',
+        'rounded-sm',
+        'rounded-md',
+        'rounded-lg',
+        'rounded-xl',
+        'rounded-2xl',
+        'rounded-3xl',
+        'rounded-full',
+
+        // Text colors for all major colors
+        ...['slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'].flatMap((color) => [
+            `text-${color}-50`,
+            `text-${color}-100`,
+            `text-${color}-200`,
+            `text-${color}-300`,
+            `text-${color}-400`,
+            `text-${color}-500`,
+            `text-${color}-600`,
+            `text-${color}-700`,
+            `text-${color}-800`,
+            `text-${color}-900`,
+            `text-${color}-950`,
+        ]),
+
+        // Background colors
+        ...['slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'].flatMap((color) => [
+            `bg-${color}-50`,
+            `bg-${color}-100`,
+            `bg-${color}-200`,
+            `bg-${color}-300`,
+            `bg-${color}-400`,
+            `bg-${color}-500`,
+            `bg-${color}-600`,
+            `bg-${color}-700`,
+            `bg-${color}-800`,
+            `bg-${color}-900`,
+            `bg-${color}-950`,
+        ]),
+
+        // Border colors
+        ...['slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'].flatMap((color) => [
+            `border-${color}-50`,
+            `border-${color}-100`,
+            `border-${color}-200`,
+            `border-${color}-300`,
+            `border-${color}-400`,
+            `border-${color}-500`,
+            `border-${color}-600`,
+            `border-${color}-700`,
+            `border-${color}-800`,
+            `border-${color}-900`,
+            `border-${color}-950`,
+        ]),
+
+        // Hover states
+        ...['slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'].flatMap((color) => [
+            `hover:bg-${color}-50`,
+            `hover:bg-${color}-100`,
+            `hover:bg-${color}-200`,
+            `hover:bg-${color}-300`,
+            `hover:bg-${color}-400`,
+            `hover:bg-${color}-500`,
+            `hover:bg-${color}-600`,
+            `hover:bg-${color}-700`,
+            `hover:bg-${color}-800`,
+            `hover:bg-${color}-900`,
+            `hover:bg-${color}-950`,
+        ]),
+
+        // Opacity variations for backgrounds
+        ...['slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'].flatMap((color) => [
+            `bg-${color}-500/10`,
+            `bg-${color}-500/20`,
+            `bg-${color}-500/30`,
+            `bg-${color}-500/40`,
+            `bg-${color}-500/50`,
+            `bg-${color}-500/60`,
+            `bg-${color}-500/70`,
+            `bg-${color}-500/80`,
+            `bg-${color}-500/90`,
+        ]),
+
+        // Basic colors
+        'text-black',
+        'text-white',
+        'bg-black',
+        'bg-white',
+        'border-black',
+        'border-white',
+        'hover:bg-black',
+        'hover:bg-white',
+
+        // Gradient backgrounds
+        'bg-gradient-to-r',
+        'bg-gradient-to-l',
+        'bg-gradient-to-t',
+        'bg-gradient-to-b',
+        'bg-gradient-to-tr',
+        'bg-gradient-to-tl',
+        'bg-gradient-to-br',
+        'bg-gradient-to-bl',
+
+        // Opacity variations for black/white
+        'bg-black/10',
+        'bg-black/20',
+        'bg-black/30',
+        'bg-black/40',
+        'bg-black/50',
+        'bg-white/10',
+        'bg-white/20',
+        'bg-white/30',
+        'bg-white/40',
+        'bg-white/50',
+    ],
     theme: {
-        // fontFamily: {
-        //     sans: ['Inter'],
-        // },
         extend: {
             borderRadius: {
                 lg: 'var(--radius)',

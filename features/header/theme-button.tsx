@@ -1,7 +1,6 @@
 import { useTheme } from '../../hooks/use-theme';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { selectTheme, setTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
 
 interface ThemeButtonProps {
     themeType: ThemeName;

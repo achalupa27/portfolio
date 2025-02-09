@@ -14,9 +14,22 @@ import { useTheme } from '../hooks/use-theme';
 const Home = () => {
     const theme = useAppSelector(selectTheme);
     const { text, bg, font } = useTheme();
+    const themeObject = useTheme();
     const themes = useAppSelector((state) => state.theme.themes);
-    // console.log('selectedTheme: ', theme);
-    // console.log('allThemes: ', themes);
+    console.log('Current theme ID:', theme);
+    console.log('Current theme object:', themes[theme]);
+    console.log('Theme object from useTheme:', themeObject);
+    console.log('Classes being applied:', {
+        text: themeObject.text,
+        bg: themeObject.bg,
+        font: themeObject.font,
+        bgSecondary: themeObject.bgSecondary,
+        border: themeObject.border,
+        rounded: themeObject.rounded,
+        hover: themeObject.hover,
+        invertedText: themeObject.invertedText,
+        invertedBg: themeObject.invertedBg,
+    });
 
     return (
         <>
