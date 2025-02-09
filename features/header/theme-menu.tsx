@@ -1,6 +1,3 @@
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
 import Dark from '../../components/icons/themes/Dark';
 import Earth from '../../components/icons/themes/Earth';
 import Fire from '../../components/icons/themes/Fire';
@@ -11,13 +8,10 @@ import Space from '../../components/icons/themes/Space';
 import Water from '../../components/icons/themes/Water';
 import Wind from '../../components/icons/themes/Wind';
 import ThemeButton from './theme-button';
+import { useTheme } from '../../hooks/use-theme';
 
 const div = () => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const style = themes[selectedTheme];
-    const border = style.border;
-    const bgSecondary = style.bgSecondary;
-    const rounded = style.rounded;
+    const { border, bgSecondary, rounded } = useTheme();
 
     return (
         <header className='relative'>

@@ -1,15 +1,12 @@
 import Link from 'next/link';
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useTheme } from '../../hooks/use-theme';
 
 interface ProjectCardProps {
     project: Project;
 }
 
 const WebsiteCard = ({ project }: ProjectCardProps) => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const { bgSecondary, bg, border, rounded } = themes[selectedTheme];
+    const { bg, rounded } = useTheme();
 
     return (
         <div className={`mt-4 ${rounded}`}>

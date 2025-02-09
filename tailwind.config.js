@@ -85,7 +85,7 @@ module.exports = {
                 freeze: {
                     '0%': {
                         opacity: '0',
-                        transform: 'scale(0.9)',
+                        transform: 'scale(0.3)',
                         filter: 'blur(10px)',
                     },
                     '100%': {

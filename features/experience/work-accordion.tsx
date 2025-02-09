@@ -1,17 +1,14 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
 import { workExperience } from '../../data/workData';
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useTheme } from '../../hooks/use-theme';
 import WorkCard from './work-card';
 import Image from 'next/image';
 
 const WorkAccordion = () => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const { border, bgSecondary, bg, rounded } = themes[selectedTheme];
+    const { bgSecondary, bg, rounded } = useTheme();
 
     return (
-        <div className={`h-full ${rounded} rounded-t-none ${border} ${bgSecondary} px-4 py-4`}>
+        <div className={`h-full ${rounded} rounded-t-none ${bgSecondary} z-10 px-4 py-4`}>
             <Accordion type='single' collapsible defaultValue='item-1'>
                 <AccordionItem value='item-1' className='border-b-0'>
                     <AccordionTrigger className='p-0'>

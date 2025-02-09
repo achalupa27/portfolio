@@ -1,16 +1,13 @@
 // WorkCard.jsx
 
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useTheme } from '../../hooks/use-theme';
 
 type Props = {
     workExperience: WorkExperience;
 };
 
 const WorkCard = ({ workExperience }: Props) => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const { bg } = themes[selectedTheme];
+    const { bg } = useTheme();
 
     return (
         <div key={workExperience.company} className={``}>

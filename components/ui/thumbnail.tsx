@@ -1,6 +1,4 @@
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useTheme } from '../../hooks/use-theme';
 
 type Props = {
     icon: React.ReactNode;
@@ -8,8 +6,7 @@ type Props = {
 };
 
 const Thumbnail = ({ icon, size }: Props) => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const { bgSecondary, bg, rounded } = themes[selectedTheme];
+    const { bgSecondary, bg, rounded } = useTheme();
 
     return <div className={`flex items-center justify-center ${rounded} ${bg} p-2`}>{icon}</div>;
 };

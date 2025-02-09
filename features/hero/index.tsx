@@ -2,13 +2,10 @@ import CanadaFlag from '../../components/icons/socials/CanadaFlag';
 import GitHubIcon from '../../components/icons/socials/GitHub';
 import LinkedInIcon from '../../components/icons/socials/LinkedInIcon';
 import MorphingText from '../../components/ui/morphing-text';
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useTheme } from '../../hooks/use-theme';
 
 const Hero = () => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const { bgSecondary, border, rounded } = themes[selectedTheme];
+    const { bgSecondary, border, rounded } = useTheme();
 
     return (
         <section id='hero' className={`${rounded} ${border} ${bgSecondary} z-10 flex w-full flex-col px-8 py-6`}>

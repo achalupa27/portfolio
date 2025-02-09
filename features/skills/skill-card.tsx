@@ -1,15 +1,12 @@
 import Thumbnail from '../../components/ui/thumbnail';
-import { useAppSelector } from '../../redux/hooks';
-import { selectTheme } from '../../redux/slices/themeSlice';
-import { themes } from '../../themes';
+import { useTheme } from '../../hooks/use-theme';
 
 interface SkillCardProps {
     skill: Skill;
 }
 
 const SkillCard = ({ skill }: SkillCardProps) => {
-    const selectedTheme = useAppSelector(selectTheme);
-    const { bgSecondary, bg } = themes[selectedTheme];
+    const { bgSecondary, bg } = useTheme();
 
     return (
         <div className={`flex w-60 space-x-3 rounded p-3`}>

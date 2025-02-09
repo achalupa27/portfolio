@@ -11,10 +11,8 @@ interface ThemeColors {
         text: string;
     };
     placeholder: string;
-    inverted: {
-        text: string;
-        bg: string;
-    };
+    invertedText: string;
+    invertedBg: string;
     font: string;
 }
 
