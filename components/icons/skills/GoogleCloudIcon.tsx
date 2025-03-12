@@ -1,6 +1,6 @@
-const GoogleCloudIcon = ({ width = 24, height = 24 }) => {
+const GoogleCloudIcon = ({ size = 24 }) => {
     return (
-        <svg width={width} height={height} viewBox='0 0 256 206' version='1.1' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid'>
+        <svg width={size} height={size} viewBox='0 0 256 206' version='1.1' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid'>
             <g>
                 <path d='M170.2517,56.8186 L192.5047,34.5656 L193.9877,25.1956 C153.4367,-11.6774 88.9757,-7.4964 52.4207,33.9196 C42.2667,45.4226 34.7337,59.7636 30.7167,74.5726 L38.6867,73.4496 L83.1917,66.1106 L86.6277,62.5966 C106.4247,40.8546 139.8977,37.9296 162.7557,56.4286 L170.2517,56.8186 Z' fill='#EA4335'></path>
                 <path

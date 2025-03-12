@@ -11,12 +11,13 @@ import Wind from '../../components/icons/themes/Wind';
 import ThemeButton from './theme-button';
 import { useTheme } from '../../hooks/use-theme';
 import { ChevronLeft, Wand2 } from 'lucide-react';
-import { setTheme, addTheme } from '../../redux/slices/themeSlice';
-import { useAppDispatch } from '../../redux/hooks';
+import { setTheme, addTheme, selectTheme } from '../../redux/slices/themeSlice';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { PlaceholdersAndVanishInput } from '../../components/ui/placeholders';
 
 const ANIMATION_DURATION = 500; // matches the duration in the className
 
-const ThemeMenu = () => {
+const ThemeDock = () => {
     const dispatch = useAppDispatch();
     const [isGenerating, setIsGenerating] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -31,6 +32,7 @@ const ThemeMenu = () => {
             setIsTransitioning(false);
         }, ANIMATION_DURATION);
     };
+    const currentTheme = useAppSelector(selectTheme);
 
     const handleGenerate = async () => {
         if (!prompt) return;
@@ -67,7 +69,28 @@ const ThemeMenu = () => {
 
     return (
         <header className='relative'>
-            <div className={`fixed left-1/2 top-4 z-50 mx-auto flex -translate-x-1/2 transform items-center justify-center space-x-1 ${rounded} ${border} bg-opacity-30 ${bgSecondary} p-2 shadow backdrop-blur-lg transition-all duration-500 ease-in-out ${isGenerating ? 'w-[24rem] sm:w-[36rem]' : 'w-[24rem]'}`}>
+            <div className={`fixed left-1/2 top-8 z-50 flex -translate-x-1/2 transform flex-row items-center justify-center space-x-1 ${rounded} bg-opacity-30 ${bgSecondary} p-2 shadow backdrop-blur-lg transition-all duration-500 ease-in-out ${isGenerating ? 'w-[24rem] sm:w-[36rem]' : 'w-[24rem]'} relative overflow-hidden`}>
+                {/* Gradient Border effects */}
+                {currentTheme === 'space' && (
+                    <>
+                        {/* Top borders - enhanced glow, indigo/sky gradient border */}
+                        <div className='absolute inset-x-0 top-0 h-[4px] w-full bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
+                        <div className='absolute inset-x-0 top-0 h-px w-full bg-gradient-to-r from-indigo-500 to-sky-500' />
+
+                        {/* Left borders - enhanced glow, indigo/sky gradient border */}
+                        <div className='absolute inset-y-0 left-0 h-full w-[4px] bg-gradient-to-b from-transparent via-indigo-500 to-transparent blur-sm' />
+                        <div className='absolute inset-y-0 left-0 h-full w-px bg-gradient-to-b from-indigo-500 to-sky-500' />
+
+                        {/* Right borders - enhanced glow, indigo/sky gradient border */}
+                        <div className='absolute inset-y-0 right-0 h-full w-[4px] bg-gradient-to-b from-transparent via-indigo-500 to-transparent blur-sm' />
+                        <div className='absolute inset-y-0 right-0 h-full w-px bg-gradient-to-b from-sky-500 to-indigo-500' />
+
+                        {/* Bottom borders - enhanced glow, indigo/sky gradient border */}
+                        <div className='absolute inset-x-0 bottom-0 h-[4px] w-full bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
+                        <div className='absolute inset-x-0 bottom-0 h-px w-full bg-gradient-to-r from-sky-500 to-indigo-500' />
+                    </>
+                )}
+
                 {!isGenerating && !isTransitioning ? (
                     <>
                         <ThemeButton themeType='light' icon={<Light />} />
@@ -89,7 +112,7 @@ const ThemeMenu = () => {
                         <button onClick={handleBack} className={`flex h-8 w-8 shrink-0 items-center justify-center ${rounded} hover:${bgSecondary}`} aria-label='Back to themes'>
                             <ChevronLeft className='h-5 w-5' />
                         </button>
-                        <input type='text' value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder='Describe a theme...' className={`w-full bg-transparent outline-none ${text}`} />
+                        <PlaceholdersAndVanishInput placeholders={['Generate a theme...', 'Matrix Theme', 'Create a theme...', 'Generate a theme...', 'Create a theme...']} onChange={(e) => setPrompt(e.target.value)} onSubmit={handleGenerate} />
                         <button onClick={handleGenerate} disabled={loading || !prompt} className={`shrink-0 ${rounded} px-4 hover:${bgSecondary} disabled:opacity-50`}>
                             {loading ? 'Generating...' : 'Generate'}
                         </button>
@@ -100,4 +123,4 @@ const ThemeMenu = () => {
     );
 };
 
-export default ThemeMenu;
+export default ThemeDock;

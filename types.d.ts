@@ -26,12 +26,13 @@ interface WorkExperience {
 interface Project {
     id: number;
     name: string;
-    logo: string;
+    logo: JSX.Element;
     url: string;
     category: string;
     period: string;
     technologies: Skill[];
     hasWalkthrough?: boolean;
+    description: string;
 }
 
 interface Skill {

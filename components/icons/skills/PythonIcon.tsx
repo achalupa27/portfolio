@@ -1,6 +1,6 @@
-const PythonIcon = ({ width = 24, height = 24 }) => {
+const PythonIcon = ({ size = 24 }) => {
     return (
-        <svg width={width} height={height} viewBox='0 0 256 255' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet'>
+        <svg width={size} height={size} viewBox='0 0 256 255' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet'>
             <defs>
                 <linearGradient x1='12.959%' y1='12.039%' x2='79.639%' y2='78.201%' id='a'>
                     <stop stopColor='#387EB8' offset='0%' />

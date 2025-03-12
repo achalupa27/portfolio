@@ -1,20 +1,15 @@
 import Thumbnail from '../../components/ui/thumbnail';
-import { useTheme } from '../../hooks/use-theme';
 
 interface SkillCardProps {
     skill: Skill;
+    showTextOnHover?: boolean;
+    alwaysShowText?: boolean;
 }
 
-const SkillCard = ({ skill }: SkillCardProps) => {
-    const { bgSecondary, bg } = useTheme();
-
+const SkillCard = ({ skill, showTextOnHover = true, alwaysShowText = false }: SkillCardProps) => {
     return (
-        <div className={`flex w-60 space-x-3 rounded p-3`}>
-            <Thumbnail icon={skill.icon} />
-            <div>
-                <div className='text-base'>{skill.name}</div>
-                <div className='text-sm opacity-70'>{skill.category}</div>
-            </div>
+        <div className='group p-2'>
+            <Thumbnail icon={skill.icon} size={80} text={skill.name} showTextOnHover={showTextOnHover} alwaysShowText={alwaysShowText} />
         </div>
     );
 };

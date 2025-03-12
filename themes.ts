@@ -67,7 +67,7 @@ export const themes: Record<ThemeName, ThemeColors> = {
     },
     rain: {
         text: 'text-stone-900',
-        bg: 'bg-gray-400',
+        bg: 'bg-gray-500',
         border: 'border border-stone-900',
         hover: 'hover:bg-stone-800',
         invertedText: 'text-gray-400',
@@ -96,6 +96,6 @@ export const themes: Record<ThemeName, ThemeColors> = {
         invertedBg: 'bg-white',
         bgSecondary: '',
         rounded: '',
-        font: '',
+        font: 'font-[Oxanium]',
     },
 };

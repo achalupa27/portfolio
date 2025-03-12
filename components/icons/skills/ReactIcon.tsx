@@ -1,6 +1,6 @@
-const ReactIcon = ({ width = 24, height = 24 }) => {
+const ReactIcon = ({ size = 24 }) => {
     return (
-        <svg width={width} height={height} xmlns='http://www.w3.org/2000/svg' viewBox='-11.5 -10.23174 23 20.46348'>
+        <svg width={size} height={size} xmlns='http://www.w3.org/2000/svg' viewBox='-11.5 -10.23174 23 20.46348'>
             <title>React Logo</title>
             <circle cx='0' cy='0' r='2.05' fill='#61dafb' />
             <g stroke='#61dafb' strokeWidth='1' fill='none'>

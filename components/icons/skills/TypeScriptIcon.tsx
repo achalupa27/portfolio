@@ -1,6 +1,6 @@
-const TypeScriptIcon = ({ width = 24, height = 24 }) => {
+const TypeScriptIcon = ({ size = 24 }) => {
     return (
-        <svg fill='none' width={width} height={height} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+        <svg fill='none' width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
             <rect fill='#3178c6' height='512' rx='50' width='512' />
             <rect fill='#3178c6' height='512' rx='50' width='512' />
             <path

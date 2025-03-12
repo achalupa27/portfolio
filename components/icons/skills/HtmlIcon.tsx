@@ -1,6 +1,6 @@
-const HtmlIcon = ({ width = 24, height = 24 }) => {
+const HtmlIcon = ({ size = 24 }) => {
     return (
-        <svg xmlns='http://www.w3.org/2000/svg' width={width} height={height} viewBox='0 0 512 512'>
+        <svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} viewBox='0 0 512 512'>
             <title>HTML5 Logo Badge</title>
             <path fill='#E34F26' d='M71,460 L30,0 481,0 440,460 255,512' />
             <path fill='#EF652A' d='M256,472 L405,431 440,37 256,37' />

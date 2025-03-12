@@ -7,7 +7,6 @@ import SupabaseIcon from '../components/icons/skills/SupabaseIcon';
 import TailwindIcon from '../components/icons/skills/TailwindIcon';
 import TypeScriptIcon from '../components/icons/skills/TypeScriptIcon';
 import VercelIcon from '../components/icons/skills/VercelIcon';
-import GitHubIcon from '../components/icons/socials/GitHub';
 import NextIcon from '../components/icons/skills/NextIcon';
 
 export const typescriptSkill: Skill = {
@@ -23,7 +22,7 @@ export const pythonSkill: Skill = {
 };
 
 export const nextJsSkill: Skill = {
-    name: 'Next',
+    name: 'Next.js',
     category: 'React Framework',
     icon: <NextIcon />,
 };
@@ -64,22 +63,10 @@ export const supabaseSkill: Skill = {
     icon: <SupabaseIcon />,
 };
 
-export const mysqlSkill: Skill = {
-    name: 'MySQL',
-    category: 'Database',
-    icon: <SupabaseIcon />,
-};
-
 export const postgresSkill: Skill = {
-    name: 'PostgreSQL',
+    name: 'Postgres',
     category: 'Database',
     icon: <PostgreSQLIcon />,
-};
-
-export const githubSkill: Skill = {
-    name: 'GitHub',
-    category: 'Version Control',
-    icon: <GitHubIcon />,
 };
 
 export const stripeSkill: Skill = {

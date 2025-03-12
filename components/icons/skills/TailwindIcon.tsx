@@ -1,6 +1,6 @@
-const TailwindIcon = ({ width = 24, height = 24 }) => {
+const TailwindIcon = ({ size = 24 }) => {
     return (
-        <svg xmlns='http://www.w3.org/2000/svg' fill='none' width={width} height={height} viewBox='0 0 54 33'>
+        <svg xmlns='http://www.w3.org/2000/svg' fill='none' width={size} height={size} viewBox='0 0 54 33'>
             <g clipPath='url(#prefix__clip0)'>
                 <path
                     fill='#38bdf8'
