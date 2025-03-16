@@ -11,7 +11,7 @@ interface ThemeState {
 }
 
 const initialState: ThemeState = {
-    theme: 'light',
+    theme: 'space',
     themes: initialThemes,
     activeSection: null,
     expandedProjectId: null,

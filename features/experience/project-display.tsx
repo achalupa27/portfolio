@@ -42,6 +42,7 @@ const ProjectDisplay = ({ projectId }: ProjectDisplayProps) => {
                         <ExternalLink className='ml-2 h-4 w-4 opacity-70 transition-transform group-hover:scale-110' />
                     </a>
                 </div>
+                <p className='text-center text-sm opacity-70'>{project.description}</p>
             </div>
 
             {currentTheme === 'space' && (
@@ -54,7 +55,7 @@ const ProjectDisplay = ({ projectId }: ProjectDisplayProps) => {
 
             {/* Video Placeholder */}
             <div className={`relative mb-6 aspect-video w-full overflow-hidden`}>
-                <div className='absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900'>
+                <div className='absolute inset-0 flex items-center justify-center '>
                     {currentTheme === 'space' && (
                         <>
                             {/* Space theme borders with enhanced glow effect */}
@@ -81,13 +82,15 @@ const ProjectDisplay = ({ projectId }: ProjectDisplayProps) => {
                 </div>
             </div>
 
-            {/* Technology Icons */}
-            <div className='flex flex-wrap justify-center gap-3'>
-                {project.technologies.map((tech, index) => (
-                    <div key={index} className='group flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 bg-opacity-40 transition-all hover:bg-opacity-60' title={tech.name}>
-                        <div className='h-5 w-5 transition-transform group-hover:scale-110'>{tech.icon}</div>
-                    </div>
-                ))}
+            {/* Technology Icons - Using CSS Grid with proper centering */}
+            <div className='flex w-full justify-center'>
+                <div className='inline-grid grid-cols-5 gap-3'>
+                    {project.technologies.map((tech, index) => (
+                        <div key={index} className='group flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-opacity-60' title={tech.name}>
+                            <div className='h-5 w-5 transition-transform group-hover:scale-110'>{tech.icon}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

@@ -112,7 +112,7 @@ const ThemeDock = () => {
                         <button onClick={handleBack} className={`flex h-8 w-8 shrink-0 items-center justify-center ${rounded} hover:${bgSecondary}`} aria-label='Back to themes'>
                             <ChevronLeft className='h-5 w-5' />
                         </button>
-                        <PlaceholdersAndVanishInput placeholders={['Generate a theme...', 'Matrix Theme', 'Create a theme...', 'Generate a theme...', 'Create a theme...']} onChange={(e) => setPrompt(e.target.value)} onSubmit={handleGenerate} />
+                        <input autoFocus className='flex-1 rounded-md border-none bg-transparent text-sm outline-none' type='text' value={prompt} onChange={(e) => setPrompt(e.target.value)} />
                         <button onClick={handleGenerate} disabled={loading || !prompt} className={`shrink-0 ${rounded} px-4 hover:${bgSecondary} disabled:opacity-50`}>
                             {loading ? 'Generating...' : 'Generate'}
                         </button>

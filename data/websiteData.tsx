@@ -7,6 +7,7 @@ import PostgreSQLIcon from '../components/icons/skills/PostgreSQLIcon';
 import PythonIcon from '../components/icons/skills/PythonIcon';
 import ReactIcon from '../components/icons/skills/ReactIcon';
 import ReduxIcon from '../components/icons/skills/ReduxIcon';
+import StripeIcon from '../components/icons/skills/StripeIcon';
 import SupabaseIcon from '../components/icons/skills/SupabaseIcon';
 import TailwindIcon from '../components/icons/skills/TailwindIcon';
 import TypeScriptIcon from '../components/icons/skills/TypeScriptIcon';
@@ -34,7 +35,7 @@ export const cleantradesProject: Project = {
     url: 'https://www.cleantrades.com',
     category: 'Stock Trading Journal',
     period: '2022 - Present',
-    description: 'A comprehensive stock trading journal that helps traders track, analyze, and improve their trading performance with advanced analytics and AI-powered insights.',
+    description: 'Stock Journal, Personal Trading Platform',
     technologies: [
         { icon: <NextIcon />, name: 'Next.js' },
         { icon: <ReactIcon />, name: 'React' },
@@ -45,6 +46,7 @@ export const cleantradesProject: Project = {
         { icon: <SupabaseIcon />, name: 'Supabase' },
         { icon: <PostgreSQLIcon />, name: 'PostgreSQL' },
         { icon: <PythonIcon />, name: 'Python' },
+        { icon: <StripeIcon />, name: 'Stripe' },
     ],
     hasWalkthrough: true,
     demoUrl: 'https://www.cleantrades.com',
@@ -58,7 +60,7 @@ export const lightsuiteProject: Project = {
     url: 'https://www.lightsuite.ca',
     category: 'Self Improvement Platform',
     period: '2023 - Present',
-    description: 'A holistic self-improvement platform that combines habit tracking, goal setting, and personal development tools to help users achieve their full potential.',
+    description: 'Life, Body, Mind Improvement Platform',
     technologies: [
         { icon: <NextIcon />, name: 'Next.js' },
         { icon: <ReactIcon />, name: 'React' },
@@ -66,7 +68,8 @@ export const lightsuiteProject: Project = {
         { icon: <TailwindIcon />, name: 'Tailwind CSS' },
         { icon: <ReduxIcon />, name: 'Redux' },
         { icon: <VercelIcon />, name: 'Vercel' },
-        { icon: <FirebaseIcon />, name: 'Firebase' },
+        { icon: <SupabaseIcon />, name: 'Supabase' },
+        { icon: <StripeIcon />, name: 'Stripe' },
     ],
     hasWalkthrough: true,
     demoUrl: 'https://www.lightsuite.ca',
@@ -80,7 +83,7 @@ export const lunariaProject: Project = {
     url: 'https://www.lunaria.space',
     category: 'Personal Finance Dashboard',
     period: '2023 - Present',
-    description: 'An intuitive personal finance dashboard that helps users visualize, manage, and optimize their financial health with beautiful charts and actionable insights.',
+    description: 'Personal Finance Dashboard',
     technologies: [
         { icon: <NextIcon />, name: 'Next.js' },
         { icon: <ReactIcon />, name: 'React' },
@@ -89,6 +92,7 @@ export const lunariaProject: Project = {
         { icon: <ReduxIcon />, name: 'Redux' },
         { icon: <VercelIcon />, name: 'Vercel' },
         { icon: <SupabaseIcon />, name: 'Supabase' },
+        { icon: <StripeIcon />, name: 'Stripe' },
     ],
     hasWalkthrough: true,
     demoUrl: 'https://www.lunaria.space',

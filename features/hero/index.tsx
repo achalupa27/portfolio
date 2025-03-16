@@ -1,3 +1,4 @@
+import { IconPdf } from '@tabler/icons-react';
 import CanadaFlag from '../../components/icons/socials/CanadaFlag';
 import GitHubIcon from '../../components/icons/socials/GitHub';
 import LinkedInIcon from '../../components/icons/socials/LinkedInIcon';
@@ -6,6 +7,7 @@ import { nextJsSkill, reactSkill, typescriptSkill, tailwindSkill, reduxSkill, py
 import { useTheme } from '../../hooks/use-theme';
 import { useAppSelector } from '../../redux/hooks';
 import { selectTheme } from '../../redux/slices/themeSlice';
+import { FileText } from 'lucide-react';
 
 const Hero = () => {
     const { bgSecondary, border, rounded } = useTheme();
@@ -38,8 +40,11 @@ const Hero = () => {
                     <a href='https://github.com/achalupa27' target='_blank' rel='noopener noreferrer'>
                         <GitHubIcon />
                     </a>
-                    <a href='https://www.linkedin.com/in/andrew-chalupa/' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://www.linkedin.com/in/achalupa27/' target='_blank' rel='noopener noreferrer'>
                         <LinkedInIcon />
+                    </a>
+                    <a href='/resume.pdf' target='_blank'>
+                        <FileText />
                     </a>
                 </div>
             </div>
